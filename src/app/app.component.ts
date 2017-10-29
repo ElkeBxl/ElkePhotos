@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { IPhotoService } from './photo.service';
+import { PHOTO_SERVICE_TOKEN } from './photo.service.token';
+import { Photo } from './models/photo';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+    title = 'Elke.photos portfolio';
+    photos: Photo[] = [];
+
+  constructor(@Inject(PHOTO_SERVICE_TOKEN) private photoService: IPhotoService) { }
+
+  getPhotos(): Photo[] {
+     return this.photoService.getAlbum("test");
+  }
 }
