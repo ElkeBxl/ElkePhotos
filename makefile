@@ -5,3 +5,9 @@ update:
 
 push: 
 	git push -u origin master
+
+deploy:
+	ng build --prod
+
+local: 
+	ng serve
