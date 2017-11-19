@@ -32,6 +32,8 @@
     position: fixed;
     top: 0;
     left: $navbar-width;
+    height: 100%;
+    bottom: 0;
     z-index: 1000;
     border-right: 1px solid black;
     width: $navbar-width;
