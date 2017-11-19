@@ -1,6 +1,57 @@
 @import './_variables';
 @import './_mixins';
+@import './_reset';
 
-* {
+.weddings {
     color: $color-weddings;
+}
+
+.photoshoots {
+    color: $color-photoshoots;
+}
+
+.events {
+    color: $color-events;
+}
+
+.parties {
+    color: $color-parties;
+}
+
+.project365 {
+    color: $color-project365;
+}
+
+.container {
+    padding-left: $navbar-width;
+    margin: 0;
+    width: 100%;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: $navbar-width;
+    z-index: 1000;
+    border-right: 1px solid black;
+    width: $navbar-width;
+    margin-left: -$navbar-width;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li {
+        width: 100%;
+        line-height: 30px;
+        text-align: center;
+    }
+}
+
+.content {
+    position: relative;
+    margin-right: 0;
+    width: 100%;
 }
