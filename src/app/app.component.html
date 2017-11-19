@@ -1,5 +1,21 @@
-<ul>
-  <li *ngFor="let photo of photos">
-    {{photo.description}}
-  </li>
-</ul>
+<div class="row">
+  <nav class="col-xs-12 col-md-2">
+    <h1>Elke.photos</h1>
+    <p>Elke herinnering voor eeuwig vastleggen</p>
+    <ul>
+      <li>Home</li>
+      <li>Huwelijken</li>
+      <li>Photoshoots</li>
+      <li>Events</li>
+      <li>Fuiven</li>
+      <li>365 project</li>
+    </ul>
+  </nav>
+  <div class="col-md-10">
+    <ul>
+      <li *ngFor="let photo of photos">
+        {{photo.description}}
+      </li>
+    </ul>
+  </div>   
+</div>
