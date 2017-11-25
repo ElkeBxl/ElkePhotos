@@ -26,29 +26,29 @@ describe('Project365Component', () => {
     let fixture: ComponentFixture<Project365Component>;
 
     beforeEach(() => {
-    TestBed.configureTestingModule({
-        declarations: [Project365Component, Project365PhotoComponent]
+        TestBed.configureTestingModule({
+            declarations: [Project365Component, Project365PhotoComponent]
+        });
+
+        TestBed.overrideComponent(Project365Component, {
+            set: {
+                providers: [
+                    { provide: PHOTO_SERVICE_TOKEN, useClass: MockPhotoService }
+                ]
+            }
+        });
+
+        fixture = TestBed.createComponent(Project365Component);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
     });
 
-    TestBed.overrideComponent(Project365Component, {
-        set: {
-            providers: [
-                { provide: PHOTO_SERVICE_TOKEN, useClass: MockPhotoService }
-            ]
-        }
+    it('should create', () => {
+        expect(component).toBeTruthy();
     });
 
-    fixture = TestBed.createComponent(Project365Component);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should render a h2 tag', () => {
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h2') === null).toBeFalsy();
-  });
+    it('should render a h2 tag', () => {
+        const compiled = fixture.debugElement.nativeElement;
+        expect(compiled.querySelector('h2') === null).toBeFalsy();
+    });
 });
