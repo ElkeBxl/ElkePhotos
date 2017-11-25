@@ -12,6 +12,7 @@ import { Project365Component } from '../project365/project365.component';
     SharedModule,
     Project365RoutingModule
   ],
-  declarations: [Project365Component]
+  declarations: [Project365Component],
+  exports: [Project365Component]
 })
 export class Project365Module { }

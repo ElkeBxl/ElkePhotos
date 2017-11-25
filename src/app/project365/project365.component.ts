@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-project365',
+  selector: 'project365',
   templateUrl: './project365.component.html',
   styleUrls: ['./project365.component.scss']
 })
