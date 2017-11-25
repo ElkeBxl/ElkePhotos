@@ -4,6 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { Project365Component } from '../project365/project365.component';
 import { AppComponent } from '../app.component';
 import { HomeComponent } from '../home/home.component';
+import { WeddingsComponent } from '../weddings/weddings.component';
+import { PartiesComponent } from '../parties/parties.component';
+import { PhotoshootsComponent } from '../photoshoots/photoshoots.component';
+import { EventsComponent } from '../events/events.component';
+import { ContactComponent } from '../contact/contact.component';
   
 @NgModule({
     imports: [
@@ -17,14 +22,14 @@ export class AppRoutingModule {
     public static getRoutes(): Routes {
         return [
             { path: 'evenementen', redirectTo: 'events', pathMatch: 'full' },            
-            { path: 'events', component: HomeComponent },        
-            { path: 'photoshoots', component: HomeComponent },
+            { path: 'events', component: EventsComponent },        
+            { path: 'photoshoots', component: PhotoshootsComponent },
             { path: 'fuiven', redirectTo: 'parties', pathMatch: 'full' },            
-            { path: 'parties', component: HomeComponent },
+            { path: 'parties', component: PartiesComponent },
             { path: 'huwelijken', redirectTo: 'weddings', pathMatch: 'full' },            
-            { path: 'weddings', component: HomeComponent },
+            { path: 'weddings', component: WeddingsComponent },
             { path: 'project365', component: Project365Component },
-            { path: 'contact', component: HomeComponent },            
+            { path: 'contact', component: ContactComponent },            
             { path: 'home', component: HomeComponent },
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: '**', component: HomeComponent }

@@ -9,6 +9,12 @@ import { AppComponent } from '../app.component';
 import { Project365Module } from '../project365/project365.module';
 import { HomeModule } from '../home/home.module';
 import { HomeComponent } from '../home/home.component';
+import { EventsComponent } from '../events/events.component';
+import { PartiesModule } from '../parties/parties.module';
+import { PhotoshootsModule } from '../photoshoots/photoshoots.module';
+import { EventsModule } from '../events/events.module';
+import { WeddingsModule } from '../weddings/weddings.module';
+import { ContactModule } from '../contact/contact.module';
 
 @Component({ selector: 'app-root', template: '<router-outlet></router-outlet>' })
 class MockAppComponent { }
@@ -29,7 +35,12 @@ describe('AppRoutingModule', () => {
         imports: [ 
             RouterTestingModule.withRoutes(AppRoutingModule.getRoutes()),
             Project365Module,
-            HomeModule
+            HomeModule,
+            EventsModule,
+            PartiesModule,
+            PhotoshootsModule,
+            WeddingsModule,
+            ContactModule
         ],
         declarations: [
             AppComponent

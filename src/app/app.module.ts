@@ -16,6 +16,11 @@ import { HomeModule } from './home/home.module';
 import { registerLocaleData } from '@angular/common';
 
 import localenlBE from '@angular/common/locales/nl-BE';
+import { WeddingsModule } from './weddings/weddings.module';
+import { EventsModule } from './events/events.module';
+import { PartiesModule } from './parties/parties.module';
+import { PhotoshootsModule } from './photoshoots/photoshoots.module';
+import { ContactModule } from './contact/contact.module';
 registerLocaleData(localenlBE);
 
 @NgModule({
@@ -29,7 +34,12 @@ registerLocaleData(localenlBE);
 		SharedModule,
         Project365Module,
         HomeModule,
-        AppRoutingModule
+        AppRoutingModule,
+        WeddingsModule,
+        EventsModule,
+        PartiesModule,
+        PhotoshootsModule,
+        ContactModule
     ],
     providers: [
         { provide: APP_BASE_HREF, useValue : '/' },
