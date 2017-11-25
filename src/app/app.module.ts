@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { JSONPhotoService } from './photo.service.json';
 import { PHOTO_SERVICE_TOKEN } from './photo.service.token';
+import { SharedModule } from './shared/shared.module';
+import { Project365Module } from './project365/project365.module';
 
 @NgModule({
 	declarations: [
@@ -14,7 +16,9 @@ import { PHOTO_SERVICE_TOKEN } from './photo.service.token';
 	imports: [
 		BrowserModule,
 		FormsModule,
-		HttpModule
+		HttpModule,
+		SharedModule,
+		Project365Module
 	],
 	providers: [
 		{ provide: PHOTO_SERVICE_TOKEN, useClass: JSONPhotoService }
