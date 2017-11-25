@@ -68,4 +68,46 @@ describe('AppRoutingModule', () => {
             expect(location.path()).toBe('/project365');
         });
     }));
+    
+    it('navigate to "huwelijken" routes you to /weddings', fakeAsync(() => {
+        router.navigate(['huwelijken']).then((success) => {
+            expect(location.path()).toBe('/weddings');
+        });
+    }));
+    
+    it('navigate to "weddings" routes you to /weddings', fakeAsync(() => {
+        router.navigate(['weddings']).then((success) => {
+            expect(location.path()).toBe('/weddings');
+        });
+    }));
+    
+    it('navigate to "fuiven" routes you to /parties', fakeAsync(() => {
+        router.navigate(['fuiven']).then((success) => {
+            expect(location.path()).toBe('/parties');
+        });
+    }));
+
+    it('navigate to "parties" routes you to /parties', fakeAsync(() => {
+        router.navigate(['parties']).then((success) => {
+            expect(location.path()).toBe('/parties');
+        });
+    }));
+    
+    it('navigate to "photoshoots" routes you to /photoshoots', fakeAsync(() => {
+        router.navigate(['photoshoots']).then((success) => {
+            expect(location.path()).toBe('/photoshoots');
+        });
+    }));
+    
+    it('navigate to "evenementen" routes you to /events', fakeAsync(() => {
+        router.navigate(['evenementen']).then((success) => {
+            expect(location.path()).toBe('/events');
+        });
+    }));
+    
+    it('navigate to "events" routes you to /events', fakeAsync(() => {
+        router.navigate(['events']).then((success) => {
+            expect(location.path()).toBe('/events');
+        });
+    }));
 });
