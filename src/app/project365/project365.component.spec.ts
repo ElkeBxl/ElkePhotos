@@ -9,6 +9,7 @@ import { Project365Photo } from '../models/project365photo';
 import { IPhotoService } from '../photo.service';
 import { Photo } from '../models/photo';
 import { Project365PhotoComponent } from './project365-photo/project365-photo.component';
+import { LimitPipe } from '../shared/limit.pipe';
 
 // We mock a PhotoService to avoid any dependencies on stuff 
 // like HttpClient (as is the case in JSONPhotoService)
@@ -27,7 +28,7 @@ describe('Project365Component', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [Project365Component, Project365PhotoComponent]
+            declarations: [Project365Component, Project365PhotoComponent, LimitPipe]
         });
 
         TestBed.overrideComponent(Project365Component, {

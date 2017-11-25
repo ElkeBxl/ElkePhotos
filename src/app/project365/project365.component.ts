@@ -10,7 +10,8 @@ import { IPhotoService } from '../photo.service';
 })
 export class Project365Component implements OnInit {
     photos: Project365Photo[] = [];
-    
+    counter: number = 3;
+
     constructor(@Inject(PHOTO_SERVICE_TOKEN) private photoService: IPhotoService) { 
     }
     
