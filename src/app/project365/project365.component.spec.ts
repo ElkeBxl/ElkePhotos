@@ -22,4 +22,9 @@ describe('Project365Component', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render a h1 tag', async(() => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1') === null).toBeFalsy();
+  }));
 });
