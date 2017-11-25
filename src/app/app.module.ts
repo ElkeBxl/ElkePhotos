@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -13,7 +13,11 @@ import { Project365Component } from './project365/project365.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HomeModule } from './home/home.module';
-  
+import { registerLocaleData } from '@angular/common';
+
+import localenlBE from '@angular/common/locales/nl-BE';
+registerLocaleData(localenlBE);
+
 @NgModule({
 	declarations: [
 		AppComponent
@@ -27,7 +31,10 @@ import { HomeModule } from './home/home.module';
         HomeModule,
         AppRoutingModule
     ],
-    providers: [{provide: APP_BASE_HREF, useValue : '/' }],
+    providers: [
+        { provide: APP_BASE_HREF, useValue : '/' },
+        { provide: LOCALE_ID, useValue: 'nl-be' }
+    ],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
