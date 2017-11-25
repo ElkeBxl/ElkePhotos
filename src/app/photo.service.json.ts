@@ -1,5 +1,5 @@
 import { IPhotoService } from "./photo.service";
-import { Injectable } from "@angular/core";
+import { Injectable, Inject } from "@angular/core";
 import { Http } from "@angular/http";
 import { Photo } from "./models/photo";
 import { Project365Photo } from "./models/project365photo";

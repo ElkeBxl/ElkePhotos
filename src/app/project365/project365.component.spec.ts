@@ -2,19 +2,42 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Project365Module } from './project365.module';
 import { Project365Component } from './project365.component';
+import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
+import { SharedModule } from '../shared/shared.module';
+import { JSONPhotoService } from '../photo.service.json';
+import { PhotoComponent } from '../shared/photo/photo.component';
+import { Project365Photo } from '../models/project365photo';
+import { IPhotoService } from '../photo.service';
+import { Photo } from '../models/photo';
+
+// We mock a PhotoService to avoid any dependencies on stuff 
+// like HttpClient (as is the case in JSONPhotoService)
+class MockPhotoService implements IPhotoService {
+    getProject365(): Promise<Project365Photo[]> {
+        return new Promise(() => new Array<Project365Photo>());
+    }
+    getAlbum(): Promise<Photo[]> {
+        return new Promise(() => new Array<Photo>());
+    }
+}
 
 describe('Project365Component', () => {
-  let component: Project365Component;
-  let fixture: ComponentFixture<Project365Component>;
+    let component: Project365Component;
+    let fixture: ComponentFixture<Project365Component>;
 
-  beforeEach(async(() => {
+    beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [Project365Module]
-    })
-    .compileComponents();
-  }));
+        declarations: [Project365Component, PhotoComponent]
+    });
 
-  beforeEach(() => {
+    TestBed.overrideComponent(Project365Component, {
+        set: {
+            providers: [
+                { provide: PHOTO_SERVICE_TOKEN, useClass: MockPhotoService }
+            ]
+        }
+    });
+
     fixture = TestBed.createComponent(Project365Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -24,8 +47,8 @@ describe('Project365Component', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render a h2 tag', async(() => {
+  it('should render a h2 tag', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h2') === null).toBeFalsy();
-  }));
+  });
 });

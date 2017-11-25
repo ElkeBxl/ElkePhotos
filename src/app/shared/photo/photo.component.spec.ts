@@ -19,9 +19,9 @@ describe('PhotoComponent', () => {
         fixture.detectChanges();
     });
 
-    it('should create', () => {
+    it('should create', async(() => {
         expect(component).toBeTruthy();
-    });
+    }));
   
     it('should render an img tag', async(() => {
         const compiled = fixture.debugElement.nativeElement;

@@ -30,7 +30,7 @@ describe('JSONPhotoService', () => {
     });
 
     describe('getProject365()', () => {
-        it('should return a Promise<Project365Photo[]>', () => {
+        it('should return a Promise<Project365Photo[]>', async(() => {
             let mockResult = [
                 new Project365Photo('test')
             ];
@@ -44,20 +44,20 @@ describe('JSONPhotoService', () => {
             const req = httpMock.expectOne((all) => true);
             expect(req.request.method).toBe("GET");
             req.flush(mockResult);
-        });
+        }));
     });
 
     describe('getAlbum()', () => {
-        it('should return an error when no albumname is given', () => {
+        it('should return an error when no albumname is given', async(() => {
             expect(function() {
                 service.getAlbum('');
             }).toThrowError();
 
             // we want to make sure there are no requests done
             httpMock.expectNone((all) => true);
-        });
+        }));
 
-        it('should return a Promise with content when an albumname is given', () => {
+        it('should return a Promise with content when an albumname is given', async(() => {
             let mockResult = [
                 new Photo('test')
             ];
@@ -71,6 +71,6 @@ describe('JSONPhotoService', () => {
             const req = httpMock.expectOne((all) => true);
             expect(req.request.method).toBe("GET");
             req.flush(mockResult);
-        });
+        }));
     });
 });

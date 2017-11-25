@@ -15,14 +15,11 @@ import { HttpClientModule } from '@angular/common/http';
 		AppComponent
 	],
 	imports: [
-		HttpClientModule,
 		BrowserModule,
+		HttpClientModule,
 		FormsModule,
 		SharedModule,
 		Project365Module
-	],
-	providers: [
-        { provide: PHOTO_SERVICE_TOKEN, useClass: JSONPhotoService }
 	],
 	bootstrap: [AppComponent]
 })
