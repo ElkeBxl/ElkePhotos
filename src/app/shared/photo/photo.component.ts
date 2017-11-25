@@ -9,8 +9,13 @@ import { Photo } from '../../models/photo';
 export class PhotoComponent implements OnInit {
     @Input() photo: Photo;
     
-    constructor() { }
+    constructor() { 
+        this.photo = new Photo('');
+    }
 
     ngOnInit() {
+        if (!this.photo) {
+            throw new Error('Photo is required');
+        }
     }
 }

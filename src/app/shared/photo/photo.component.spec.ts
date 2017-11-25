@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PhotoComponent } from './photo.component';
+import { Component } from '@angular/core';
 
 describe('PhotoComponent', () => {
     let component: PhotoComponent;
@@ -25,6 +26,13 @@ describe('PhotoComponent', () => {
   
     it('should render an img tag', async(() => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('img') === null).toBeFalsy();
+        expect(compiled.querySelector('img')).toBeDefined();
     }));
+
+    it('should have a required photo parameter', () => {
+        component.photo = undefined;
+        expect(function () {
+            component.ngOnInit();
+        }).toThrow();
+    });
 });
