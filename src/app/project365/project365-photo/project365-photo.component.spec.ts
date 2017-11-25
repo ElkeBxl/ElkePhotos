@@ -1,34 +1,33 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PhotoComponent } from './photo.component';
-import { Component } from '@angular/core';
+import { Project365PhotoComponent } from './project365-photo.component';
 
-describe('PhotoComponent', () => {
-    let component: PhotoComponent;
-    let fixture: ComponentFixture<PhotoComponent>;
+describe('Project365PhotoComponent', () => {
+    let component: Project365PhotoComponent;
+    let fixture: ComponentFixture<Project365PhotoComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ PhotoComponent ]
+            declarations: [ Project365PhotoComponent ]
         })
         .compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(PhotoComponent);
+        fixture = TestBed.createComponent(Project365PhotoComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
 
-    it('should create', async(() => {
+    it('should create', () => {
         expect(component).toBeTruthy();
-    }));
+    });
   
     it('should render an img tag', async(() => {
         const compiled = fixture.debugElement.nativeElement;
         expect(compiled.querySelector('img')).not.toBe(null);
     }));
-
+    
     it('should have a required photo parameter', () => {
         component.photo = undefined;
         expect(function () {

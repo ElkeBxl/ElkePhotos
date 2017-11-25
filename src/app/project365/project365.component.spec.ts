@@ -5,10 +5,10 @@ import { Project365Component } from './project365.component';
 import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
 import { SharedModule } from '../shared/shared.module';
 import { JSONPhotoService } from '../photo.service.json';
-import { PhotoComponent } from '../shared/photo/photo.component';
 import { Project365Photo } from '../models/project365photo';
 import { IPhotoService } from '../photo.service';
 import { Photo } from '../models/photo';
+import { Project365PhotoComponent } from './project365-photo/project365-photo.component';
 
 // We mock a PhotoService to avoid any dependencies on stuff 
 // like HttpClient (as is the case in JSONPhotoService)
@@ -27,7 +27,7 @@ describe('Project365Component', () => {
 
     beforeEach(() => {
     TestBed.configureTestingModule({
-        declarations: [Project365Component, PhotoComponent]
+        declarations: [Project365Component, Project365PhotoComponent]
     });
 
     TestBed.overrideComponent(Project365Component, {

@@ -7,6 +7,7 @@ import { Project365RoutingModule } from './project365-routing.module';
 import { Project365Component } from '../project365/project365.component';
 import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
 import { JSONPhotoService } from '../photo.service.json';
+import { Project365PhotoComponent } from './project365-photo/project365-photo.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,7 @@ import { JSONPhotoService } from '../photo.service.json';
   providers: [
       { provide: PHOTO_SERVICE_TOKEN, useClass: JSONPhotoService }
   ],
-  declarations: [Project365Component],
+  declarations: [Project365Component, Project365PhotoComponent],
   exports: [Project365Component]
 })
 export class Project365Module { }
