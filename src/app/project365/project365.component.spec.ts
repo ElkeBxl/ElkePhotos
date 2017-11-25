@@ -52,4 +52,30 @@ describe('Project365Component', () => {
         const compiled = fixture.debugElement.nativeElement;
         expect(compiled.querySelector('h2') === null).toBeFalsy();
     });
+    
+    it('should show more photos when showMore() is called', () => {
+        component.photos = new Array<Project365Photo>();
+        component.photos.push(new Project365Photo('photo 1'));
+        component.photos.push(new Project365Photo('photo 2'));
+        component.photos.push(new Project365Photo('photo 3'));
+
+        component.counter = 0;
+        component.showMore(1);
+        component.showMore(1);
+
+        expect(component.counter).toBe(2);
+    });
+    
+    it('should not overreach the photos shown when showMore() is called too often', () => {
+        component.photos = new Array<Project365Photo>();
+        component.photos.push(new Project365Photo('photo 1'));
+        component.photos.push(new Project365Photo('photo 2'));
+        component.photos.push(new Project365Photo('photo 3'));
+
+        component.counter = 2;
+        component.showMore(1);
+        component.showMore(1);
+
+        expect(component.counter).toBe(3);
+    });
 });

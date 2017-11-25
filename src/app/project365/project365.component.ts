@@ -10,12 +10,19 @@ import { IPhotoService } from '../photo.service';
 })
 export class Project365Component implements OnInit {
     photos: Project365Photo[] = [];
-    counter: number = 3;
+    counter: number = 10;
 
     constructor(@Inject(PHOTO_SERVICE_TOKEN) private photoService: IPhotoService) { 
     }
     
     ngOnInit() {
         this.photoService.getProject365().then(res => this.photos = res);
+    }
+
+    showMore(amount: number = 10): void {
+        this.counter = this.counter + amount;
+        if (this.counter > this.photos.length) {
+            this.counter = this.photos.length;
+        }
     }
 }
