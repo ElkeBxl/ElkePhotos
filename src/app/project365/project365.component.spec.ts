@@ -28,7 +28,8 @@ describe('Project365Component', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [Project365Component, Project365PhotoComponent, LimitPipe]
+            declarations: [Project365Component, Project365PhotoComponent],
+            imports: [ SharedModule ]
         });
 
         TestBed.overrideComponent(Project365Component, {

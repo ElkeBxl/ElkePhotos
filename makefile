@@ -11,3 +11,6 @@ deploy:
 
 local: 
 	ng serve
+
+test: 
+	ng test -sm=false
