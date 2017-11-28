@@ -1,0 +1,55 @@
+h2 {
+    background-image: url('../../assets/images/weddings-background.jpg');
+    background-size: 100% auto;
+    background-position-y: 50%;
+    height: 200px;
+    position: relative;
+    margin: 0 0 10pt 0;
+
+    span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 15px;
+        background: rgba(255, 0, 0, 0.5);
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+}
+
+aside {
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        text-align: right;
+        color: grey;
+        font-size: 11pt;
+        line-height: 18pt;
+        padding-right: 5px;
+
+        &.active {
+            border-right: 3px solid rgba(255, 0, 0, 0.5);
+        }
+    }
+
+    .photocollection div {
+        padding: 0;
+        padding-top: 50%;
+        display: inline-block;
+        position: relative;
+
+        span {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 5px;
+            background: red;
+        }
+    }
+}

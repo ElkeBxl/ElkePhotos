@@ -123,4 +123,15 @@
         font-family: $font-family;
         font-size: $font-size-title;
     }
+    
+    h3 {
+        font-weight: normal;
+        margin: 10pt 0;
+    }
+
+    p {
+        font-size: 11pt;
+        line-height: 18pt;
+        margin: 10pt 0;
+    }
 }
