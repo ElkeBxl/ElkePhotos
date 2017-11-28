@@ -26,7 +26,6 @@ export class RotatingPhotosComponent implements OnInit {
         return this._amount;
     }
     @Input('amount') set amount(newAmount: number) {
-        console.log(newAmount);
         if (newAmount < 1) {
             throw new Error('Amount should be bigger than 0, given: ' + newAmount);
         }
@@ -62,7 +61,6 @@ export class RotatingPhotosComponent implements OnInit {
     }
 
     getBackgroundImage(): string {
-        console.log(this.location);
         return 'url(\'' + this.location + '-' + this.current.toString() + '.jpg\')';
     }
 }

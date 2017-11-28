@@ -9,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotoshootsComponent implements OnInit {
 
-  constructor() { }
+    pageTitle: string = "Photoshoots";
 
-  ngOnInit() {
-  }
+    constructor() { }
+
+    ngOnInit() {
+    }
 
 }
