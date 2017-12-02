@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'generic-thumbnail',
@@ -13,7 +14,17 @@ export class GenericThumbnailComponent implements OnInit {
 
     @Input() classes: string[];
 
-    constructor() { }
+    @Input() image: string;
+
+    constructor(private modalService: NgbModal) {}
+    
+      open(content) {
+        this.modalService.open(content, { windowClass: 'custom-modal' }).result.then((result) => {
+          
+        }, (reason) => {
+          
+        });
+      }
 
     ngOnInit() {
     }

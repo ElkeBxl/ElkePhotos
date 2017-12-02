@@ -11,7 +11,7 @@ export class SidebarThumbnailComponent implements OnInit {
     get image(): string {
         return this._image;
     }
-    set image(newImage: string) {
+    @Input() set image(newImage: string) {
         if (newImage.length < 1) {
             throw new Error('Image url should be provided, given: ' + newImage);
         }

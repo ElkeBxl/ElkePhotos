@@ -1,1 +1,3 @@
-<generic-thumbnail [classes]="'col-xs-6'" [genericStylings]="{'padding-top': '50%'}" [contentStylings]="{'background-image': 'url(' + image + ')' }">Test 1</generic-thumbnail>
+<generic-thumbnail [image]="image" [contentStylings]="{'background-image': 'url(' + image + ')' }">
+    <ng-content></ng-content>
+</generic-thumbnail>

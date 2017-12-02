@@ -22,21 +22,22 @@
     color: $color-project365;
 }
 
-.container {
+/*.container {
     padding-left: $navbar-width;
     margin: 0;
     width: 100%;
-}
+}*/
 
 .nav {
     position: fixed;
     top: 0;
-    left: $navbar-width;
+    bottom: 0;
+    /*left: $navbar-width;
     height: 100%;
     bottom: 0;
     z-index: 1000;
     width: $navbar-width;
-    margin-left: -$navbar-width;
+    margin-left: -$navbar-width;*/
     background: $color-weddings;
     text-align: center;
 
@@ -64,6 +65,7 @@
         list-style: none;
         margin: 0;
         padding: 0;
+        width: 100%;
     }
 
     ul li {
@@ -114,9 +116,10 @@
 }
 
 .content {
-    position: relative;
+    /*position: relative;
     margin-right: 0;
-    width: 100%;
+    /*width: 100%;
+    margin-left: $navbar-width;*/
     padding: 25px;
     
     h2 {
@@ -136,5 +139,51 @@
         font-size: 11pt;
         line-height: 18pt;
         margin: 12pt 0;
+    }
+
+    sidebar-thumbnail {
+        overflow: hidden;
+        padding: 10px;
+    }
+}
+
+
+
+.modal-dialog {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+
+    .modal-body {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        
+        img {
+            max-height: calc(100vh - 70px);
+        }
+    }
+
+    .modal-content {
+        max-height: 100%;
+        max-width: 100%;
+        border: 0;
+    }
+
+    button.close {
+        position: absolute;
+        right: -25px;
+        top: -25px;
+        background: white;
+        height: 50px;
+        width: 50px;
+        z-index: 5000;
+        border-radius: 25px;
+        font-size: 2rem;
     }
 }
