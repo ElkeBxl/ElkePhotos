@@ -2,6 +2,7 @@
     <div class="col-md-9">
         <rotating-photos [amount]="5" [location]="'assets/images/weddings-background'">Huwelijksfotografie</rotating-photos>
         <h3>De mooiste dag van je leven, voor eeuwig vastgelegd!</h3>
+        <p>Trouwen met de ware is een prachtig moment. Het is een unieke dag in je leven die je voor altijd zal bijblijven.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec sagittis nulla. Morbi a egestas velit. Morbi fringilla dui non egestas rutrum. Pellentesque hendrerit, mi ut sodales aliquet, nisi lectus ullamcorper felis, sed sagittis velit purus et ante. Nullam non tincidunt eros, in semper sapien. Cras at erat a metus ullamcorper ullamcorper. Curabitur a odio enim. Phasellus condimentum sem vitae metus condimentum faucibus. Duis pharetra mollis ligula id imperdiet. Nulla ut commodo metus. Morbi eget mattis justo.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec sagittis nulla. Morbi a egestas velit. Morbi fringilla dui non egestas rutrum. Pellentesque hendrerit, mi ut sodales aliquet, nisi lectus ullamcorper felis, sed sagittis velit purus et ante. Nullam non tincidunt eros, in semper sapien. Cras at erat a metus ullamcorper ullamcorper. Curabitur a odio enim. Phasellus condimentum sem vitae metus condimentum faucibus. Duis pharetra mollis ligula id imperdiet. Nulla ut commodo metus. Morbi eget mattis justo.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec sagittis nulla. Morbi a egestas velit. Morbi fringilla dui non egestas rutrum. Pellentesque hendrerit, mi ut sodales aliquet, nisi lectus ullamcorper felis, sed sagittis velit purus et ante. Nullam non tincidunt eros, in semper sapien. Cras at erat a metus ullamcorper ullamcorper. Curabitur a odio enim. Phasellus condimentum sem vitae metus condimentum faucibus. Duis pharetra mollis ligula id imperdiet. Nulla ut commodo metus. Morbi eget mattis justo.</p>
@@ -16,18 +17,10 @@
             <li>Achteraf</li>
         </ul>
         <div class="row photocollection">
-            <div class="col-xs-6">
-                <span>Pic1</span>
-            </div>
-            <div class="col-xs-6">
-                <span>Pic2</span>
-            </div>
-            <div class="col-xs-6">
-                <span>Pic3</span>
-            </div>
-            <div class="col-xs-6">
-                <span>Pic4</span>
-            </div>
+            <generic-thumbnail [classes]="'col-xs-6'" [genericStylings]="{'background-color': 'red', 'padding-top': '50%'}">Test 1</generic-thumbnail>
+            <generic-thumbnail [classes]="'col-xs-6'" [genericStylings]="{'background-color': 'red', 'padding-top': '50%'}">Test 2</generic-thumbnail>
+            <generic-thumbnail [classes]="'col-xs-6'" [genericStylings]="{'background-color': 'red', 'padding-top': '50%'}">Test 3</generic-thumbnail>
+            <generic-thumbnail [classes]="'col-xs-6'" [genericStylings]="{'background-color': 'red', 'padding-top': '50%'}">Test 4</generic-thumbnail>
         </div>
     </aside>
 </div>
