@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GenericThumbnailComponent } from './generic-thumbnail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 describe('GenericThumbnailComponent', () => {
     let component: GenericThumbnailComponent;
@@ -8,7 +9,8 @@ describe('GenericThumbnailComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ GenericThumbnailComponent ]
+            declarations: [ GenericThumbnailComponent ],
+            imports: [ NgbModule.forRoot() ]
         })
         .compileComponents();
     }));

@@ -21,6 +21,8 @@ import { EventsModule } from './events/events.module';
 import { PartiesModule } from './parties/parties.module';
 import { PhotoshootsModule } from './photoshoots/photoshoots.module';
 import { ContactModule } from './contact/contact.module';
+import { NgbModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap/modal/modal.module';
 registerLocaleData(localenlBE);
 
 @NgModule({

@@ -14,6 +14,7 @@
     "test.ts"
   ],
   "include": [
+    "../node_modules/angular2-masonry",
     "**/*.spec.ts",
     "**/*.d.ts"
   ]

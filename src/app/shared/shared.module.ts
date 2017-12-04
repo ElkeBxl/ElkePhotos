@@ -5,19 +5,20 @@ import { LimitPipe } from './limit.pipe';
 import { RotatingPhotosComponent } from './rotating-photos/rotating-photos.component';
 import { GenericThumbnailComponent } from './generic-thumbnail/generic-thumbnail.component';
 import { SidebarThumbnailComponent } from './sidebar-thumbnail/sidebar-thumbnail.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
-    imports: [
+    imports: [        
         CommonModule,
-        NgbModule.forRoot(),
+        NgbModule.forRoot()
     ],
     exports: [
+        NgbModule,
         LimitPipe, 
         PhotoComponent, 
         RotatingPhotosComponent,
-        SidebarThumbnailComponent,
-        NgbModule
+        SidebarThumbnailComponent
     ],
     declarations: [
         LimitPipe, 

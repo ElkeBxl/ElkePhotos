@@ -1,2 +1,38 @@
 <h2 class="weddings">Elke herinnering voor eeuwig vastleggen</h2>
 <p>Huwelijksfotografie als ook evenementen, fuiven en photoshoots.</p>
+<div></div>
+<masonry [options]="myOptions" #masonryplaceholder style="opacity: 0">
+    <masonry-brick class="brick" *ngFor="let brick of loadedBricks"><img [src]="'assets/images/'+brick" class="img-fluid" /></masonry-brick>
+</masonry>
+<!--div class="grid" data-masonry='{ "itemSelector": ".item", "columnWidth": 200 }'>
+    <div class="item">
+        <img src="assets/images/weddings-background-1.jpg" class="img-fluid" />
+    </div>
+    <div class="item">
+        <img src="assets/images/weddings-background-2.jpg" class="img-fluid" />
+    </div>
+    <div class="item">
+        <img src="assets/images/weddings-background-3.jpg" class="img-fluid" />
+    </div>
+    <div class="item">
+        <img src="assets/images/weddings-background-4.jpg" class="img-fluid" />
+    </div>
+    <div class="item">
+        <img src="assets/images/photoshoots-background-1.jpg" class="img-fluid" />
+    </div>
+    <div class="item">
+        <img src="assets/images/events-background-1.jpg" class="img-fluid" />
+    </div>
+    <div class="item">
+        <img src="assets/images/events-background-2.jpg" class="img-fluid" />
+    </div>
+    <div class="item">
+        <img src="assets/images/events-background-3.jpg" class="img-fluid" />
+    </div>
+    <div class="item">
+        <img src="assets/images/events-background-4.jpg" class="img-fluid" />
+    </div>
+    <div class="item">
+        <img src="assets/images/events-background-5.jpg" class="img-fluid" />
+    </div>
+</div>-->
