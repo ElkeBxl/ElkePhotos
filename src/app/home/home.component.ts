@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
         'photoshoots-background-2.jpg',
         'photoshoots-background-3.jpg',
         'photoshoots-background-4.jpg',
+        'photoshoots-background-5.jpg',
         'weddings-background-1.jpg',
         'weddings-background-2.jpg',
         'weddings-background-3.jpg',
@@ -28,8 +29,7 @@ export class HomeComponent implements OnInit {
         'parties-background-1.jpg',
         'parties-background-2.jpg',
         'parties-background-3.jpg',
-        'parties-background-4.jpg',
-        'photoshoots-background-5.jpg'
+        'parties-background-4.jpg'
     ];
 
     loadedBricks: string[] = [];
@@ -42,6 +42,7 @@ export class HomeComponent implements OnInit {
     constructor(private renderer: Renderer) { }
 
     ngOnInit() {
+        this.randomize();
         this.reload();      
     }
 
@@ -56,8 +57,20 @@ export class HomeComponent implements OnInit {
         });  
     }
 
+    private getRandom(floor: number, ceiling: number): number {
+        return Math.floor(Math.random() * (ceiling - floor + 1)) + floor;
+    }
+
+    private randomize(): void {
+        for (let i = 0; i < this.bricks.length; i++) {
+            const randomChoiceIndex = this.getRandom(i, this.bricks.length - 1);
+            [this.bricks[i], this.bricks[randomChoiceIndex]] = [this.bricks[randomChoiceIndex], this.bricks[i]];
+        }
+    }
+
     public setBricks(bricks: string[]): void {
         this.bricks = bricks;
+        this.randomize();
         this.reload();
     }
 

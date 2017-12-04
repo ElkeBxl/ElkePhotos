@@ -39,4 +39,14 @@ describe('HomeComponent', () => {
         },
         1000);
     });
+
+    it('should randomize the bricks', async() => {
+        let bricks: string[] = ["test1", "test2", "test3", "test4", "test5"];
+        // by using Object.assign(), we copy the array instead of passing it by reference
+        component.setBricks(Object.assign([], bricks));
+        component.bricks.forEach((element) => 
+            expect(bricks.includes(element)).toBeTruthy()
+        );
+        expect(component.bricks.every((value, index, array) => bricks[index] == value)).not.toBeTruthy();
+    });
 });
