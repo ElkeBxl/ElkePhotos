@@ -37,7 +37,7 @@ describe('HomeComponent', () => {
             expect(component.loadedBricks.includes("test1")).toBeTruthy();
             done();
         },
-        1000);
+        3000);
     });
 
     it('should randomize the bricks', async() => {
