@@ -6,6 +6,7 @@ import { RotatingPhotosComponent } from './rotating-photos/rotating-photos.compo
 import { GenericThumbnailComponent } from './generic-thumbnail/generic-thumbnail.component';
 import { SidebarThumbnailComponent } from './sidebar-thumbnail/sidebar-thumbnail.component';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { InPageNavigationDirective } from './in-page-navigation.directive';
 
 
 @NgModule({
@@ -18,14 +19,16 @@ import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
         LimitPipe, 
         PhotoComponent, 
         RotatingPhotosComponent,
-        SidebarThumbnailComponent
+        SidebarThumbnailComponent,
+        InPageNavigationDirective
     ],
     declarations: [
         LimitPipe, 
         PhotoComponent, 
         RotatingPhotosComponent, 
         GenericThumbnailComponent, 
-        SidebarThumbnailComponent
+        SidebarThumbnailComponent, 
+        InPageNavigationDirective
     ]
 })
 export class SharedModule { }
