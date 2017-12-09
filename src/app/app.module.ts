@@ -23,6 +23,7 @@ import { PhotoshootsModule } from './photoshoots/photoshoots.module';
 import { ContactModule } from './contact/contact.module';
 import { NgbModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap/modal/modal.module';
+import { AlbumModule } from './album/album.module';
 registerLocaleData(localenlBE);
 
 @NgModule({
@@ -41,7 +42,8 @@ registerLocaleData(localenlBE);
         EventsModule,
         PartiesModule,
         PhotoshootsModule,
-        ContactModule
+        ContactModule,
+        AlbumModule
     ],
     providers: [
         { provide: APP_BASE_HREF, useValue : '/' },

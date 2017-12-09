@@ -9,7 +9,7 @@ import { Project365Photo } from '../../models/project365photo';
 export class Project365PhotoComponent implements OnInit {
     @Input('photo') photo: Project365Photo;
     constructor() {
-        this.photo = new Project365Photo('');
+        this.photo = new Project365Photo(0);
         this.photo.day = 0;
         this.photo.month = 0;
         this.photo.year = 0;
@@ -42,7 +42,7 @@ export class Project365PhotoComponent implements OnInit {
         }
     }
 
-    pad(num: number, size: number): string {
+    private pad(num: number, size: number): string {
         let s = num + '';
         while (s.length < size) s = '0' + s;
         return s;

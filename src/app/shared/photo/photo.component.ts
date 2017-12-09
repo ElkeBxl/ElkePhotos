@@ -10,7 +10,7 @@ export class PhotoComponent implements OnInit {
     @Input() photo: Photo;
     
     constructor() { 
-        this.photo = new Photo('');
+        this.photo = new Photo(0);
     }
 
     ngOnInit() {

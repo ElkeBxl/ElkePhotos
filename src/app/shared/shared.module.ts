@@ -7,12 +7,14 @@ import { GenericThumbnailComponent } from './generic-thumbnail/generic-thumbnail
 import { SidebarThumbnailComponent } from './sidebar-thumbnail/sidebar-thumbnail.component';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InPageNavigationDirective } from './in-page-navigation.directive';
+import { MasonryModule } from 'angular2-masonry';
 
 
 @NgModule({
     imports: [        
         CommonModule,
-        NgbModule.forRoot()
+        NgbModule.forRoot(),
+        MasonryModule
     ],
     exports: [
         NgbModule,
@@ -20,7 +22,8 @@ import { InPageNavigationDirective } from './in-page-navigation.directive';
         PhotoComponent, 
         RotatingPhotosComponent,
         SidebarThumbnailComponent,
-        InPageNavigationDirective
+        InPageNavigationDirective,
+        MasonryModule
     ],
     declarations: [
         LimitPipe, 

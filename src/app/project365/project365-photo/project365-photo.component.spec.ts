@@ -37,7 +37,7 @@ describe('Project365PhotoComponent', () => {
     });
 
     it('should generate a correct project365 photo URL', () => {
-        component.photo = new Project365Photo('test');
+        component.photo = new Project365Photo(1);
         component.photo.day = 1;
         component.photo.month = 10;
         component.photo.year = 2017;

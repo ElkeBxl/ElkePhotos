@@ -97,4 +97,10 @@ describe('AppRoutingModule', () => {
             expect(location.path()).toBe('/events');
         });
     }));
+    
+    it('navigate to "album/test" routes you to /album/test', fakeAsync(() => {
+        router.navigate(['album/test']).then((success) => {
+            expect(location.path()).toBe('/album/test');
+        });
+    }));
 });

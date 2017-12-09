@@ -10,6 +10,7 @@ import { IPhotoService } from '../photo.service';
 import { Photo } from '../models/photo';
 import { Project365PhotoComponent } from './project365-photo/project365-photo.component';
 import { LimitPipe } from '../shared/limit.pipe';
+import { Album } from '../models/album';
 
 // We mock a PhotoService to avoid any dependencies on stuff 
 // like HttpClient (as is the case in JSONPhotoService)
@@ -17,8 +18,8 @@ class MockPhotoService implements IPhotoService {
     getProject365(): Promise<Project365Photo[]> {
         return new Promise(() => new Array<Project365Photo>());
     }
-    getAlbum(): Promise<Photo[]> {
-        return new Promise(() => new Array<Photo>());
+    getAlbum(): Promise<Album> {
+        return new Promise(() => new Album('testAlbum'));
     }
 }
 
@@ -56,9 +57,9 @@ describe('Project365Component', () => {
     
     it('should show more photos when showMore() is called', () => {
         component.photos = new Array<Project365Photo>();
-        component.photos.push(new Project365Photo('photo 1'));
-        component.photos.push(new Project365Photo('photo 2'));
-        component.photos.push(new Project365Photo('photo 3'));
+        component.photos.push(new Project365Photo(1, 'photo 1'));
+        component.photos.push(new Project365Photo(2, 'photo 2'));
+        component.photos.push(new Project365Photo(3, 'photo 3'));
 
         component.counter = 0;
         component.showMore(1);
@@ -69,9 +70,9 @@ describe('Project365Component', () => {
     
     it('should not overreach the photos shown when showMore() is called too often', () => {
         component.photos = new Array<Project365Photo>();
-        component.photos.push(new Project365Photo('photo 1'));
-        component.photos.push(new Project365Photo('photo 2'));
-        component.photos.push(new Project365Photo('photo 3'));
+        component.photos.push(new Project365Photo(1, 'photo 1'));
+        component.photos.push(new Project365Photo(2, 'photo 2'));
+        component.photos.push(new Project365Photo(3, 'photo 3'));
 
         component.counter = 2;
         component.showMore(1);

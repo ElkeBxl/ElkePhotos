@@ -9,6 +9,7 @@ import { PartiesComponent } from '../parties/parties.component';
 import { PhotoshootsComponent } from '../photoshoots/photoshoots.component';
 import { EventsComponent } from '../events/events.component';
 import { ContactComponent } from '../contact/contact.component';
+import { AlbumComponent } from '../album/album.component';
   
 @NgModule({
     imports: [
@@ -31,6 +32,7 @@ export class AppRoutingModule {
             { path: 'project365', component: Project365Component },
             { path: 'contact', component: ContactComponent },            
             { path: 'home', component: HomeComponent },
+            { path: 'album/:name', component: AlbumComponent, },
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: '**', component: HomeComponent }
         ];

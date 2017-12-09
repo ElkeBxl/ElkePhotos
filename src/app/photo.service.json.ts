@@ -4,13 +4,14 @@ import { Http } from "@angular/http";
 import { Photo } from "./models/photo";
 import { Project365Photo } from "./models/project365photo";
 import { HttpClient } from "@angular/common/http";
+import { Album } from "./models/album";
 
 interface Project365ItemsResponse {
     results: Project365Photo[];
 }
 
-interface PhotoItemsResponse {
-    results: Photo[];
+interface AlbumResponse {
+    results: Album[];
 }
 
 @Injectable()
@@ -18,14 +19,24 @@ export class JSONPhotoService implements IPhotoService {
 
     constructor(private http:HttpClient) { }
 
-    getAlbum(name: string): Promise<Photo[]> {
+    getAlbum(name: string): Promise<Album> {
         if (!name) {
             throw new Error('No album name is given'); 
         }
 
-        return this.http.get<PhotoItemsResponse>('')
+        return this.http.get<Album[]>('./assets/data/albums.json')
                .toPromise()
-               .then(res => res)
+               .then(res => {
+                   let album = res.find((album) => album.id == name);
+                   if (!album) {
+                       return this.handleError('Invalid album name is given');
+                   }
+                   album.photos = new Array<Photo>();
+                   for (let i = 1; i <= album.photosCount; i++) {
+                       album.photos.push(new Photo(i));
+                   }
+                   return album;
+               })
                .catch(this.handleError);
     };
 
@@ -37,7 +48,6 @@ export class JSONPhotoService implements IPhotoService {
     };
 
     private handleError(error: any): Promise<any> {
-        console.error('An error occurred', error);
         return Promise.reject(error.message || error);
     }
 }
