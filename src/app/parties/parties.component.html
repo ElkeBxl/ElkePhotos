@@ -1,31 +1,30 @@
 <div class="row">
         <div class="col-md-9">
             <rotating-photos [amount]="4" [location]="'assets/images/parties-background'">{{pageTitle}}</rotating-photos>      
-            <h3>Een epische feestnacht verdient epische fotos!</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec sagittis nulla. Morbi a egestas velit. Morbi fringilla dui non egestas rutrum. Pellentesque hendrerit, mi ut sodales aliquet, nisi lectus ullamcorper felis, sed sagittis velit purus et ante. Nullam non tincidunt eros, in semper sapien. Cras at erat a metus ullamcorper ullamcorper. Curabitur a odio enim. Phasellus condimentum sem vitae metus condimentum faucibus. Duis pharetra mollis ligula id imperdiet. Nulla ut commodo metus. Morbi eget mattis justo.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec sagittis nulla. Morbi a egestas velit. Morbi fringilla dui non egestas rutrum. Pellentesque hendrerit, mi ut sodales aliquet, nisi lectus ullamcorper felis, sed sagittis velit purus et ante. Nullam non tincidunt eros, in semper sapien. Cras at erat a metus ullamcorper ullamcorper. Curabitur a odio enim. Phasellus condimentum sem vitae metus condimentum faucibus. Duis pharetra mollis ligula id imperdiet. Nulla ut commodo metus. Morbi eget mattis justo.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec sagittis nulla. Morbi a egestas velit. Morbi fringilla dui non egestas rutrum. Pellentesque hendrerit, mi ut sodales aliquet, nisi lectus ullamcorper felis, sed sagittis velit purus et ante. Nullam non tincidunt eros, in semper sapien. Cras at erat a metus ullamcorper ullamcorper. Curabitur a odio enim. Phasellus condimentum sem vitae metus condimentum faucibus. Duis pharetra mollis ligula id imperdiet. Nulla ut commodo metus. Morbi eget mattis justo.</p>
+            <h3 id="epic-party-pictures">Een episch feest verdient epische fotos!</h3>
+            <p>Op zoek naar iemand die fotos kan trekken op jouw fuif? Een groots event in een fuifzaal? Een leuk feest van de vereniging? Een tof dansfeest? Ik kan je helpen met geweldige fotos te maken!</p>
+            <h3 id="party-how-i-work">Hoe ik al de mooie fotos trek</h3>
+            <p>U huurt me in voor een vast tijdsframe waarin ik aanwezig ben en actief fotos trek. Ik loop rond in de zaal of op de locatie, ik pols eens bij de mensen of ze een groepsfoto willen, ik ga eens kijken bij de DJ, ... Ik zorg ervoor dat het resultaat een hele fotoreportage is naar uw wensen. Sfeerfotos, groepsfotos, een paar portretfotos, eens een foto van de DJ, een blik achter de schermen, alles is mogelijk! Ik probeer altijd een beetje de vibe van het publiek te voelen. Vaak is het in het begin van de avond wat rustig, wat een ideaal moment is om wat achter de schermen fotos te maken. En na een tijdje is het een ideaal moment om in het publiek te duiken en te zoekn naar al die leuke groepsfotos en fotos van mensen die stevig aan het dansen zijn. Meestal sluit ik af met eens wat bezoekjes aan de DJs, ideaal om wat sfeerfotos te maken.</p>
+            <h3 id="party-quick-results">Snelle oplevering van alle fotos</h3>
+            <p>In deze tijden van sociale media wil iedereen zo snel mogelijk hun fotos zien. Ik tracht altijd de dag erna of ten allerlaatste 2 dagen na het event de fotos op te leveren. Zo kan iedereen genieten van alle mooie fotos en kunnen uw gasten terugkijken op een zeer leuke avond.</p>
+            <h3 id="party-fix-price">Een vaste prijs op voorhand vastgelegd</h3>
+            <p>Op voorhand leggen we samen een timeframe vast waarin ik aanwezig zal zijn om fotos te trekken. Op basis hiervan stel ik ook de prijs voor. In het geval dat de fuif bijvoorbeeld wat traag op gang kwam en ik voel dat er nog genoeg fotos getrokken kunnen worden, blijf ik eventueel wat langer aanwezig. De eindprijs is sowieso dezelfde als die op de offerte zodat u geen verrassingen heeft. Hoe langer ik aanwezig ben, hoe meer er onderhandeld kan worden om een mooie ronde prijs vast te leggen.</p>
+            <h3 id="party-script">U weet wat u krijgt door onze afspraken vooraf</h3>
+            <p>Op het moment dat we een akkoord bereiken over de tijd en prijs van de opdracht zullen we ook al een paar afspraken maken. Zoals welke soort fotos u vooral wil. Wilt u meer groepsfotos of meer sfeerfotos of wat fotos achter de schermen of eerder een mix van vanalles? Alles is bespreekbaar.</p>
         </div>
         <aside class="col-md-3">
-            <ul>
-                <li class="active">Hoe ik werk</li>
-                <li>Snelle oplevering</li>
-                <li>Vaste prijs</li>
-                <li>Afspraken vooraf</li>
+            <ul inpagenavigation>
+                <li><a href="#epic-party-pictures">Fuiffotos</a></li>
+                <li><a href="#party-how-i-work">Hoe ik werk</a></li>
+                <li><a href="#party-quick-results">Snelle oplevering</a></li>
+                <li><a href="#party-fix-price">Vaste prijs</a></li>
+                <li><a href="#party-script">Afspraken vooraf</a></li>
             </ul>
-            <div class="row photocollection">
-                <div class="col-xs-6">
-                    <span>Pic1</span>
-                </div>
-                <div class="col-xs-6">
-                    <span>Pic2</span>
-                </div>
-                <div class="col-xs-6">
-                    <span>Pic3</span>
-                </div>
-                <div class="col-xs-6">
-                    <span>Pic4</span>
-                </div>
+            <div class="row">
+                <sidebar-thumbnail class="col-6" [image]="'assets/images/parties-background-1.jpg'"></sidebar-thumbnail>
+                <sidebar-thumbnail class="col-6" [image]="'assets/images/parties-background-2.jpg'"></sidebar-thumbnail>
+                <sidebar-thumbnail class="col-6" [image]="'assets/images/parties-background-3.jpg'"></sidebar-thumbnail>
+                <sidebar-thumbnail class="col-6" [image]="'assets/images/parties-background-4.jpg'"></sidebar-thumbnail>
             </div>
         </aside>
     </div>
