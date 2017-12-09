@@ -8,7 +8,7 @@ import { SidebarThumbnailComponent } from './sidebar-thumbnail/sidebar-thumbnail
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InPageNavigationDirective } from './in-page-navigation.directive';
 import { MasonryModule } from 'angular2-masonry';
-
+import { RouterLink } from '@angular/router';
 
 @NgModule({
     imports: [        

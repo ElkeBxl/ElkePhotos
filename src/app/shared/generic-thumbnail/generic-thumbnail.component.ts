@@ -16,15 +16,15 @@ export class GenericThumbnailComponent implements OnInit {
 
     @Input() image: string;
 
+    @Input() albumname: string;
+
     constructor(private modalService: NgbModal) {}
     
-      open(content) {
+    open(content) {
         this.modalService.open(content, { windowClass: 'custom-modal' }).result.then((result) => {
-          
-        }, (reason) => {
-          
+        }, (reason) => {  
         });
-      }
+    }
 
     ngOnInit() {
     }

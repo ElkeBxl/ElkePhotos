@@ -47,4 +47,21 @@ export class Project365PhotoComponent implements OnInit {
         while (s.length < size) s = '0' + s;
         return s;
     }
+
+    public translateMonth(n: number): string {
+        switch (n) {
+            case 1: return 'Januari';
+            case 2: return 'Februari';
+            case 3: return 'Maart';
+            case 4: return 'April';
+            case 5: return 'Mei';
+            case 6: return 'Juni';
+            case 7: return 'Juli';
+            case 8: return 'Augustus';
+            case 9: return 'September';
+            case 10: return 'Oktober';
+            case 11: return 'November';
+            case 12: return 'December';
+        }
+    }
 }

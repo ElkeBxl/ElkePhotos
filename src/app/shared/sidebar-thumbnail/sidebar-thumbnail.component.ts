@@ -18,6 +18,8 @@ export class SidebarThumbnailComponent implements OnInit {
         this._image = newImage;
     }
 
+    @Input() albumname: string;
+
     constructor() { }
 
     ngOnInit() {
