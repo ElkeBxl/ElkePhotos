@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { HomeComponent, HomePhoto } from './home.component';
 import { SharedModule } from '../shared/shared.module';
 import { MasonryModule } from 'angular2-masonry';
 
@@ -32,16 +32,22 @@ describe('HomeComponent', () => {
     });
 
     it('should load added bricks', async(done) => {
-        component.setBricks(["test1"]);
+        component.setBricks([new HomePhoto("test1", '')]);
         setTimeout(() => {
-            expect(component.loadedBricks.includes("test1")).toBeTruthy();
+            expect(component.loadedBricks.includes(new HomePhoto("test1", ''))).toBeTruthy();
             done();
         },
         3000);
     });
 
     it('should randomize the bricks', async() => {
-        let bricks: string[] = ["test1", "test2", "test3", "test4", "test5"];
+        let bricks: HomePhoto[] = [
+            new HomePhoto("test1", ''), 
+            new HomePhoto("test2", ''),
+            new HomePhoto("test3", ''),
+            new HomePhoto("test4", ''),
+            new HomePhoto("test5", '')
+        ];
         // by using Object.assign(), we copy the array instead of passing it by reference
         component.setBricks(Object.assign([], bricks));
         component.bricks.forEach((element) => 

@@ -2,6 +2,17 @@ import { Component, OnInit, ElementRef, ViewChild, Renderer } from '@angular/cor
 import { MasonryOptions, AngularMasonry } from 'angular2-masonry';
 import { MasonryModule } from 'angular2-masonry/src/module';
 import { Renderer2 } from '@angular/core/src/render/api';
+import { Router } from '@angular/router';
+
+export class HomePhoto {
+    public filename: string;
+    public albumname: string;
+
+    constructor(filename: string, albumname: string) {
+        this.filename = filename;
+        this.albumname = albumname;
+    }
+}
 
 @Component({
     selector: 'app-home',
@@ -15,31 +26,31 @@ export class HomeComponent implements OnInit {
     @ViewChild("masonryplaceholder", {read: ElementRef}) masonryPlaceholder: ElementRef;
     @ViewChild("preloader", {read: ElementRef}) preloader: ElementRef;
     
-    bricks: string[] = [
-        'photoshoots-background-1.jpg',
-        'photoshoots-background-2.jpg',
-        'photoshoots-background-3.jpg',
-        'photoshoots-background-4.jpg',
-        'photoshoots-background-5.jpg',
-        'weddings-background-1.jpg',
-        'weddings-background-2.jpg',
-        'weddings-background-3.jpg',
-        'weddings-background-4.jpg',
-        'weddings-background-5.jpg',
-        'parties-background-1.jpg',
-        'parties-background-2.jpg',
-        'parties-background-3.jpg',
-        'parties-background-4.jpg'
+    bricks: HomePhoto[] = [
+        new HomePhoto('photoshoots-background-1.jpg', 'photoshootpriyanka'),
+        new HomePhoto('photoshoots-background-2.jpg', 'zwangerschapshootdelphi'),
+        new HomePhoto('photoshoots-background-3.jpg', 'pasgeborenmattheo'),
+        new HomePhoto('photoshoots-background-4.jpg', ''),
+        new HomePhoto('photoshoots-background-5.jpg', ''),
+        new HomePhoto('weddings-background-1.jpg', 'huwelijkevelyneeric'),
+        new HomePhoto('weddings-background-2.jpg', 'burgerlijkhuwelijkevelynthibaud'),
+        new HomePhoto('weddings-background-3.jpg', 'huwelijkevelynthibaud'),
+        new HomePhoto('weddings-background-4.jpg', 'huwelijkdorienhannah'),
+        new HomePhoto('weddings-background-5.jpg', 'huwelijkdorienhannah'),
+        new HomePhoto('parties-background-1.jpg', 'duveltd2015'),
+        new HomePhoto('parties-background-2.jpg', 'duveltd2016'),
+        new HomePhoto('parties-background-3.jpg', 'horspistetd2017'),
+        new HomePhoto('parties-background-4.jpg', 'cocktailnightvrg2017')
     ];
 
-    loadedBricks: string[] = [];
+    loadedBricks: HomePhoto[] = [];
 
     public myOptions: MasonryOptions = { 
         transitionDuration: '0.8s',
         gutter: 10
     };
 
-    constructor(private renderer: Renderer) { }
+    constructor(private renderer: Renderer, private router: Router) { }
 
     ngOnInit() {
         this.randomize();
@@ -52,7 +63,7 @@ export class HomeComponent implements OnInit {
             {
                 let img = new Image();
                 img.onload = () => this.onImageLoaded(brick);
-                img.src = 'assets/images/' + brick;
+                img.src = 'assets/images/' + brick.filename;
             }
         });  
     }
@@ -68,14 +79,14 @@ export class HomeComponent implements OnInit {
         }
     }
 
-    public setBricks(bricks: string[]): void {
+    public setBricks(bricks: HomePhoto[]): void {
         this.bricks = bricks;
         this.randomize();
         this.reload();
     }
 
     private numberOfImagesLoaded: number = 0;
-    onImageLoaded(brick: string): void {
+    onImageLoaded(brick: HomePhoto): void {
         this.numberOfImagesLoaded++;
         if (this.numberOfImagesLoaded == this.bricks.length)
         {   
@@ -83,6 +94,12 @@ export class HomeComponent implements OnInit {
             setTimeout(() => 
                 this.renderer.setElementStyle(this.masonryPlaceholder.nativeElement, "opacity", "1"),
                 250);
+        }
+    }
+
+    public openAlbum(albumname: string): void {
+        if (albumname && albumname.length > 0) {
+            this.router.navigate(['album', albumname]);
         }
     }
 }

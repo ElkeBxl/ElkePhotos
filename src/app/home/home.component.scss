@@ -36,3 +36,9 @@
   }*/
 
   .brick { width: 250px; background: red; margin-bottom: 10px; }
+
+  .brick a {
+      height: 100%;
+      overflow: auto;
+      display: block;
+  }

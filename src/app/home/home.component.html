@@ -2,7 +2,9 @@
 <p>Huwelijksfotografie als ook evenementen, fuiven en photoshoots.</p>
 <div></div>
 <masonry [options]="myOptions" #masonryplaceholder style="opacity: 0">
-    <masonry-brick class="brick" *ngFor="let brick of loadedBricks"><img [src]="'assets/images/'+brick" class="img-fluid" /></masonry-brick>
+    <masonry-brick class="brick" *ngFor="let brick of loadedBricks">
+        <img [src]="'assets/images/'+brick.filename" (click)="openAlbum(brick.albumname)" class="img-fluid" />
+    </masonry-brick>
 </masonry>
 <!--div class="grid" data-masonry='{ "itemSelector": ".item", "columnWidth": 200 }'>
     <div class="item">
