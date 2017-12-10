@@ -1,3 +1,17 @@
 <h3>Dag &#x23;{{photo.projectday}}: {{photo.day}} {{translateMonth(photo.month)}} {{photo.year}}</h3>
-<img [src]="generatePhotoURL()" />
-<p>{{photo.description}}</p>
+<div class="row">
+    <div class="col-md-9">
+        <img [src]="generatePhotoURL()" class="img-fluid" />
+    </div>
+    <div class="col-md-3">
+        <aside>
+        <p>{{photo.description}}</p>
+        <ul>
+            <li><fa name="adjust"></fa> {{photo.aperture}}</li>
+            <li><fa name="lightbulb-o"></fa> {{photo.exposure}}</li>
+            <li><fa name="sun-o"></fa> {{photo.iso}}</li>
+            <li><fa name="arrows-h"></fa> {{photo.focallength}}</li>
+        </ul>
+        </aside>
+    </div>
+</div>

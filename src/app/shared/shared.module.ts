@@ -9,12 +9,14 @@ import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InPageNavigationDirective } from './in-page-navigation.directive';
 import { MasonryModule } from 'angular2-masonry';
 import { RouterLink } from '@angular/router';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
     imports: [        
         CommonModule,
         NgbModule.forRoot(),
-        MasonryModule
+        MasonryModule,
+        AngularFontAwesomeModule
     ],
     exports: [
         NgbModule,
@@ -23,7 +25,8 @@ import { RouterLink } from '@angular/router';
         RotatingPhotosComponent,
         SidebarThumbnailComponent,
         InPageNavigationDirective,
-        MasonryModule
+        MasonryModule,
+        AngularFontAwesomeModule
     ],
     declarations: [
         LimitPipe, 

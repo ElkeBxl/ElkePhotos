@@ -24,6 +24,7 @@ import { ContactModule } from './contact/contact.module';
 import { NgbModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap/modal/modal.module';
 import { AlbumModule } from './album/album.module';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 registerLocaleData(localenlBE);
 
 @NgModule({
