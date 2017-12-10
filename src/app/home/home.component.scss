@@ -35,10 +35,10 @@
     margin: 0 8px 8px 0; 
   }*/
 
-  .brick { width: 250px; background: red; margin-bottom: 10px; }
+.brick { width: calc(33% - 10px); background: red; margin-bottom: 10px; }
 
-  .brick a {
-      height: 100%;
-      overflow: auto;
-      display: block;
-  }
+.brick a {
+    height: 100%;
+    overflow: auto;
+    display: block;
+}
