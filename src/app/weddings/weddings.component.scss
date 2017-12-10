@@ -16,3 +16,19 @@ aside {
         }
     }
 }
+
+p {
+    img {
+        width: 40%;
+        padding: 10px;
+        border: 1px solid #ccc;
+
+        &.left {
+            margin: 5px 10px 5px 0;
+        }
+
+        &.right {
+            margin: 5px 0 5px 10px;
+        }
+    }
+}
