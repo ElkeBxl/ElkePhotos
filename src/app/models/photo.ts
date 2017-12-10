@@ -6,6 +6,7 @@ export class Photo {
     aperture: string;
     focallength: number;
     iso: number;
+    fisheye: boolean;
     constructor(id: number, name: string = '') {
         this.id = id;
         this.name = name;
