@@ -1,27 +1,17 @@
-# ElkePhotosAngular
+# Elke.photos portfolio site
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
+The current version is 1.0. There are some older versions but the current site is a complete rewrite from scratch. It's the photo portfolio site for my second job as an event, wedding, photoshoot and party photographer. I used this site as a basis to enhance my Angular and Typescript skills while also learning more stuff like Sass.
 
-## Development server
+## Technologies
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Angular 5 (project generated via the Angular CLI)
+* HTML 5
+* Bootstrap 4
+* Sass
+* Typescript 2.4
+* Jasmine unit testing framework
+* JSON as a temporary data storage
 
-## Code scaffolding
+## Future versions
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Currently I'm focusing on bugfixing the application. Once the application is stable enough, I can focus on keeping the content up-to-date and writing my own backend. As a temporary solution, all data comes from JSON files to generate the pages and photos. I'd like to write a .Net Core backend in a future release.
