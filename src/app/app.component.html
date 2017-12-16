@@ -1,17 +1,17 @@
 <div class="row">
-  <div class="nav col-2">
-    <h1><span><img src="assets/images/logo.png" /></span>Elke.photos</h1>
-    <ul>
-      <li><a routerLink="/home" routerLinkActive="active" class="home">Home</a></li>
-      <li><a routerLink="/huwelijken" routerLinkActive="active" class="weddings">Huwelijken</a></li>
-      <li><a routerLink="/photoshoots" routerLinkActive="active" class="photoshoots">Photoshoots</a></li>
-      <li><a routerLink="/evenementen" routerLinkActive="active" class="events">Events</a></li>
-      <li><a routerLink="/fuiven" routerLinkActive="active" class="parties">Fuiven</a></li>
-      <li><a routerLink="/project365" routerLinkActive="active" class="project365">365 project</a></li>
-      <li><a routerLink="/contact" routerLinkActive="active" class="contact">Contact</a></li>
-    </ul>
-  </div>
-  <div class="content col-10 offset-2">
-    <router-outlet></router-outlet>
-  </div>   
+    <div class="nav col-12 col-md-2">
+        <h1><span><img src="assets/images/logo.png" /></span>Elke.photos</h1>
+        <ul>
+            <li><a routerLink="/home" routerLinkActive="active" class="home">Home</a></li>
+            <li><a routerLink="/huwelijken" routerLinkActive="active" class="weddings">Huwelijken</a></li>
+            <li><a routerLink="/photoshoots" routerLinkActive="active" class="photoshoots">Photoshoots</a></li>
+            <li><a routerLink="/evenementen" routerLinkActive="active" class="events">Events</a></li>
+            <li><a routerLink="/fuiven" routerLinkActive="active" class="parties">Fuiven</a></li>
+            <li><a routerLink="/project365" routerLinkActive="active" class="project365">365 project</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active" class="contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="content col-12 col-md-10 offset-md-2">
+        <router-outlet></router-outlet>
+    </div>   
 </div>
