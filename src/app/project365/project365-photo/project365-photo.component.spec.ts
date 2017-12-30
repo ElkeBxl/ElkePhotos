@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Project365PhotoComponent } from './project365-photo.component';
 import { Project365Photo } from '../../models/project365photo';
+import { SharedModule } from '../../shared/shared.module';
 
 describe('Project365PhotoComponent', () => {
     let component: Project365PhotoComponent;
@@ -9,7 +10,8 @@ describe('Project365PhotoComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ Project365PhotoComponent ]
+            declarations: [ Project365PhotoComponent ],
+            imports: [ SharedModule ]
         })
         .compileComponents();
     }));
