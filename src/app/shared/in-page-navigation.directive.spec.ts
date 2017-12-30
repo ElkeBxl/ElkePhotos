@@ -16,7 +16,7 @@ describe('InPageNavigationDirective', () => {
     let listEl: DebugElement;
 
     it('should create an instance', () => {
-        const directive = new InPageNavigationDirective(null);
+        const directive = new InPageNavigationDirective(null, null);
         expect(directive).toBeTruthy();
     });
 

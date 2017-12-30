@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent, HomePhoto } from './home.component';
 import { SharedModule } from '../shared/shared.module';
 import { MasonryModule } from 'angular2-masonry';
+import { CommonModule } from '@angular/common';
 
 describe('HomeComponent', () => {
     let component: HomeComponent;
@@ -11,7 +12,7 @@ describe('HomeComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [ HomeComponent ],
-            imports: [ SharedModule, MasonryModule ]
+            imports: [ CommonModule, SharedModule, MasonryModule ]
         })
         .compileComponents();
     }));
