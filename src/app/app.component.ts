@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Elke.photos portfolio';
+    title = 'Elke.photos portfolio';
 
-  ngOnInit(): void {
-  }
+    @ViewChild("navigation") private navigationElementRef: ElementRef;
+
+    ngOnInit(): void {
+    }
+
+    public toggleNavigation(): void {
+        console.log("test");
+        let element = (<HTMLElement>this.navigationElementRef.nativeElement);
+        if (element.getAttribute("hidden")) {
+            element.removeAttribute("hidden");
+        } else {
+            element.setAttribute("hidden","true");
+        }
+    }
 }
