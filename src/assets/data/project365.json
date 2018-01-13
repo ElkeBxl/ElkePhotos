@@ -1,5 +1,44 @@
 [
     {
+        "projectday": 804,
+        "day": 12,
+        "month": 1,
+        "year": 2018,
+        "description": "Gaan lopen met Evelyn & Thibaud. We zijn helemaal tot aan het Leonard kruispunt gelopen",
+        "exposure": "1/35",
+        "aperture": "f/2,2",
+        "focallength": 4.15,
+        "fisheye": false,
+        "iso": 160,
+        "orientation": 1
+    },
+    {
+        "projectday": 803,
+        "day": 11,
+        "month": 1,
+        "year": 2018,
+        "description": "Nieuwjaarsreceptie van AG Insurance",
+        "exposure": "1/25",
+        "aperture": "f/2,2",
+        "focallength": 4.15,
+        "fisheye": false,
+        "iso": 200,
+        "orientation": 1
+    },
+    {
+        "projectday": 802,
+        "day": 10,
+        "month": 1,
+        "year": 2018,
+        "description": "Vanavond moest ik een afterwork event fotograferen. Ze hadden mij op voorhand gewaarschuwd voor de moeilijke lichtomstandigheden. In het begin viel het enorm mee maar tegen het einde begon het echt wel lastig te worden...",
+        "exposure": "1/50",
+        "aperture": "f/2,8",
+        "focallength": 24,
+        "fisheye": false,
+        "iso": 10000,
+        "orientation": 1
+    },
+    {
         "projectday": 801,
         "day": 9,
         "month": 1,
