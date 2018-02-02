@@ -5,9 +5,8 @@ import { SharedModule } from '../shared/shared.module';
 
 import { Project365RoutingModule } from './project365-routing.module';
 import { Project365Component } from '../project365/project365.component';
-import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
-import { JSONPhotoService } from '../photo.service.json';
 import { Project365PhotoComponent } from './project365-photo/project365-photo.component';
+import { PhotoService } from '../photo.service';
 
 @NgModule({
   imports: [
@@ -16,7 +15,7 @@ import { Project365PhotoComponent } from './project365-photo/project365-photo.co
     Project365RoutingModule
   ],
   providers: [
-      { provide: PHOTO_SERVICE_TOKEN, useClass: JSONPhotoService }
+      PhotoService
   ],
   declarations: [Project365Component, Project365PhotoComponent],
   exports: [Project365Component]

@@ -2,9 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Project365Module } from './project365.module';
 import { Project365Component } from './project365.component';
-import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
+// import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
 import { SharedModule } from '../shared/shared.module';
-import { JSONPhotoService } from '../photo.service.json';
+// import { JSONPhotoRepository } from '../photo.service.json';
 import { Project365Photo } from '../models/project365photo';
 import { IPhotoService } from '../photo.service';
 import { Photo } from '../models/photo';
@@ -37,7 +37,7 @@ describe('Project365Component', () => {
         TestBed.overrideComponent(Project365Component, {
             set: {
                 providers: [
-                    { provide: PHOTO_SERVICE_TOKEN, useClass: MockPhotoService }
+                    MockPhotoService
                 ]
             }
         });

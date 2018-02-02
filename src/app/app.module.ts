@@ -4,8 +4,6 @@ import { FormsModule }   from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { JSONPhotoService } from './photo.service.json';
-import { PHOTO_SERVICE_TOKEN } from './photo.service.token';
 import { SharedModule } from './shared/shared.module';
 import { Project365Module } from './project365/project365.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +23,7 @@ import { NgbModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap/modal/modal.module';
 import { AlbumModule } from './album/album.module';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { PhotoService } from './photo.service';
 registerLocaleData(localenlBE);
 
 @NgModule({

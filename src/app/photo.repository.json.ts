@@ -1,4 +1,4 @@
-import { IPhotoService } from "./photo.service";
+import { IPhotoRepository } from "./photo.repository";
 import { Injectable, Inject } from "@angular/core";
 import { Http } from "@angular/http";
 import { Photo } from "./models/photo";
@@ -15,7 +15,7 @@ interface AlbumResponse {
 }
 
 @Injectable()
-export class JSONPhotoService implements IPhotoService {
+export class JSONPhotoRepository implements IPhotoRepository {
 
     constructor(private http:HttpClient) { }
 

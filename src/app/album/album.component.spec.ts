@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AlbumComponent } from './album.component';
-import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
 import { IPhotoService } from '../photo.service';
 import { Project365Photo } from '../models/project365photo';
 import { Photo } from '../models/photo';
@@ -38,7 +37,7 @@ describe('AlbumComponent', () => {
             set: {
                 providers: [
                     { provide: ActivatedRoute, useValue: { params: Observable.of([{ name: 'test' }]) } },
-                    { provide: PHOTO_SERVICE_TOKEN, useClass: MockPhotoService }
+                    MockPhotoService
                 ]
             }
         });

@@ -10,6 +10,10 @@ import { InPageNavigationDirective } from './in-page-navigation.directive';
 import { MasonryModule } from 'angular2-masonry';
 import { RouterLink } from '@angular/router';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { PhotoService } from '../photo.service';
+import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
+import { PHOTO_REPOSITORY_TOKEN } from '../photo.repository.token';
+import { JSONPhotoRepository } from '../photo.repository.json';
 
 @NgModule({
     imports: [        
@@ -27,6 +31,10 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
         InPageNavigationDirective,
         MasonryModule,
         AngularFontAwesomeModule
+    ],
+    providers: [
+        { provide: PHOTO_SERVICE_TOKEN, useClass: PhotoService },
+        { provide: PHOTO_REPOSITORY_TOKEN, useClass: JSONPhotoRepository } 
     ],
     declarations: [
         LimitPipe, 

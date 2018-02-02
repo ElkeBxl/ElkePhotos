@@ -1,10 +1,10 @@
 import { Component, OnInit, Inject, Input, Renderer, ElementRef, ViewChild } from '@angular/core';
-import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
 import { IPhotoService } from '../photo.service';
 import { Photo } from '../models/photo';
 import { ActivatedRoute } from '@angular/router';
 import { Album } from '../models/album';
 import { MasonryOptions } from 'angular2-masonry';
+import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
 
 @Component({
     selector: 'album',

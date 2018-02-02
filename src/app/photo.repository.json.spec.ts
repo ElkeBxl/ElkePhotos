@@ -1,5 +1,5 @@
 import { TestBed, async, inject, getTestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';import { JSONPhotoService } from './photo.service.json';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';import { JSONPhotoRepository } from './photo.service.json';
 import { Project365Photo } from './models/project365photo';
 import { HttpClient } from '@angular/common/http';
 import { Photo } from './models/photo';
@@ -9,7 +9,7 @@ import { Album } from './models/album';
 describe('JSONPhotoService', () => {
 
     let injector: TestBed;
-    let service: JSONPhotoService;
+    let service: JSONPhotoRepository;
     let httpMock: HttpTestingController;
 
     beforeEach(() => {
@@ -18,11 +18,11 @@ describe('JSONPhotoService', () => {
                 HttpClientTestingModule
             ],
             providers: [ 
-                JSONPhotoService
+                JSONPhotoRepository
             ],
         });
         injector = getTestBed();
-        service = injector.get(JSONPhotoService);
+        service = injector.get(JSONPhotoRepository);
         httpMock = injector.get(HttpTestingController);
     });
 
