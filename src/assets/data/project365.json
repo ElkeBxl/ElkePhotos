@@ -1,5 +1,31 @@
 [
     {
+        "projectday": 824,
+        "day": 1,
+        "month": 2,
+        "year": 2018,
+        "description": "Hmmmm! Pesto, mozzarella en tomaat op een boterham is overheerlijk.",
+        "exposure": "1/250",
+        "aperture": "f/2,8",
+        "focallength": 70,
+        "fisheye": false,
+        "iso": 5000,
+        "orientation": 1
+    },
+    {
+        "projectday": 823,
+        "day": 31,
+        "month": 1,
+        "year": 2018,
+        "description": "Na weer 1,5km zwemmen verdien ik wel een goed bord ramen noedels :)",
+        "exposure": "1/17",
+        "aperture": "f/2,2",
+        "focallength": 4.15,
+        "fisheye": false,
+        "iso": 500,
+        "orientation": 1
+    },
+    {
         "projectday": 822,
         "day": 30,
         "month": 1,
