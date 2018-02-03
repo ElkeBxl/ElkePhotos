@@ -22,23 +22,11 @@
     color: $color-project365;
 }
 
-/*.container {
-    padding-left: $navbar-width;
-    margin: 0;
-    width: 100%;
-}*/
-
 .nav {
     position: fixed;
     top: 0;
     bottom: 0;
-    /*left: $navbar-width;
-    height: 100%;
-    bottom: 0;
-    z-index: 1000;
-    width: $navbar-width;
-    margin-left: -$navbar-width;*/
-    background: $color-weddings;
+    background: $color-project365;
     text-align: center;
 
     h1 { 
@@ -47,12 +35,12 @@
         position: relative;
         overflow: hidden;
         margin: 25px auto;
-    }
 
-    h1 span {
-        width: 100%;
-        height: 100%;
-        position: absolute;
+        span {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
     }
     
     p {
@@ -65,60 +53,132 @@
         margin: 0;
         padding: 0;
         width: 100%;
-    }
 
-    ul li {
-        padding: 10px;
-        text-align: center;
-        font-size: $font-size-menu;
-        line-height: 1.5 * $font-size-menu;
-        color: white;
-    }
+        li {
+            padding: 10px;
+            text-align: center;
+            font-size: $font-size-menu;
+            line-height: 1.5 * $font-size-menu;
+            color: white;
 
-    ul li a {
-        text-decoration: none;
-        height: 40px;
-        line-height: 40px;
-        display: block;
-        color: white !important;
+            a {
+                text-decoration: none;
+                height: 40px;
+                line-height: 40px;
+                display: block;
+                color: white !important;
+                border-radius: 5px;
+                transition: all 0.4s ease 0s;
+
+                &:hover {
+                    box-shadow: inset 0 0 0 1px white;
+                }
+
+                &.home:hover {
+                    @include invert-color($color-weddings);
+                }
+
+                &.weddings:hover {
+                    @include invert-color($color-weddings);
+                }
+
+                &.photoshoots:hover {
+                    @include invert-color($color-photoshoots);
+                }
+
+                &.events:hover {
+                    @include invert-color($color-events);
+                }
+
+                &.parties:hover {
+                    @include invert-color($color-parties);
+                }
+
+                &.project365:hover {
+                    @include invert-color($color-project365);
+                }
+            }
+        }
+    }
+}
+
+nav.dropdown {
+
+    background: $color-project365;
+
+    h1 { 
+        height: 60px;
+        width: 60px;
+        position: relative;
+        overflow: hidden;
+        margin: 10px;
+        float: left;
+        background: white;
         border-radius: 5px;
+
+        span {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    fa {
+        float: right;
+        position: relative;
+        height: 60px;
+        line-height: 60px;
+        margin: 10px;
+        background: white;
+        width: 60px;
+        text-align: center;
+        border-radius: 5px;
+
+        i {
+            font-size: 30px;
+            color: $color-project365;
+            line-height: 60px;
+        }
+    }
+
+    ul {
+        position: absolute;
+        top: 70px;
+        right: 25px;
         transition: all 0.4s ease 0s;
-    }
+        list-style: none;
+        z-index: 1000;
+        background: $color-project365;
+        padding: 0;
+        margin: 0;
+        width: 200px;
+        border-radius: 5px;
 
-    ul li a:hover {
-        box-shadow: inset 0 0 0 1px white;
-    }
-
-    ul li a.home:hover {
-        @include invert-color($color-weddings);
-    }
-
-    ul li a.weddings:hover {
-        @include invert-color($color-weddings);
-    }
-
-    ul li a.photoshoots:hover {
-        @include invert-color($color-photoshoots);
-    }
-
-    ul li a.events:hover {
-        @include invert-color($color-events);
-    }
-
-    ul li a.parties:hover {
-        @include invert-color($color-parties);
-    }
-
-    ul li a.project365:hover {
-        @include invert-color($color-project365);
+        li {
+            padding: 10px;
+            text-align: center;
+            font-size: $font-size-menu;
+            line-height: 1.5 * $font-size-menu;
+            color: white; 
+            
+            a {
+                text-decoration: none;
+                height: 40px;
+                line-height: 40px;
+                display: block;
+                color: white !important;
+                border-radius: 5px;
+            }
+        }
     }
 }
 
 .content {
-    /*position: relative;
-    margin-right: 0;
-    /*width: 100%;
-    margin-left: $navbar-width;*/
     padding: 25px;
     
     h2 {
