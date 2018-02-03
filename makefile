@@ -7,7 +7,7 @@ push:
 	git push -u origin master
 
 deploy:
-	ng build --prod
+	ng build --prod --env=prod
 
 local: 
 	ng serve

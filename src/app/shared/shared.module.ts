@@ -14,6 +14,8 @@ import { PhotoService } from '../photo.service';
 import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
 import { PHOTO_REPOSITORY_TOKEN } from '../photo.repository.token';
 import { JSONPhotoRepository } from '../photo.repository.json';
+import { APIPhotoRepository } from '../photo.repository.api';
+import { environment } from '../../environments/environment';
 
 @NgModule({
     imports: [        
@@ -34,7 +36,7 @@ import { JSONPhotoRepository } from '../photo.repository.json';
     ],
     providers: [
         { provide: PHOTO_SERVICE_TOKEN, useClass: PhotoService },
-        { provide: PHOTO_REPOSITORY_TOKEN, useClass: JSONPhotoRepository } 
+        { provide: PHOTO_REPOSITORY_TOKEN, useClass: (environment.production ? JSONPhotoRepository : APIPhotoRepository) } 
     ],
     declarations: [
         LimitPipe, 
