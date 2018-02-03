@@ -18,6 +18,6 @@ import { PhotoService } from '../photo.service';
       PhotoService
   ],
   declarations: [Project365Component, Project365PhotoComponent],
-  exports: [Project365Component]
+  exports: [Project365Component, Project365PhotoComponent]
 })
 export class Project365Module { }

@@ -50,6 +50,12 @@ describe('AppRoutingModule', () => {
         });
     }));
 
+    it('navigate to "admin" routes you to /admin', fakeAsync(() => {
+        router.navigate(['admin']).then((success) => {
+            expect(location.path()).toBe('/admin');
+        });
+    }));
+
     it('navigate to "project365" routes you to /project365', fakeAsync(() => {
         router.navigate(['project365']).then((success) => {
             expect(location.path()).toBe('/project365');

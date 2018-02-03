@@ -10,6 +10,7 @@ import { PhotoshootsComponent } from '../photoshoots/photoshoots.component';
 import { EventsComponent } from '../events/events.component';
 import { ContactComponent } from '../contact/contact.component';
 import { AlbumComponent } from '../album/album.component';
+import { AdminComponent } from '../admin/admin.component';
   
 @NgModule({
     imports: [
@@ -22,6 +23,7 @@ import { AlbumComponent } from '../album/album.component';
 export class AppRoutingModule { 
     public static getRoutes(): Routes {
         return [
+            { path: 'admin', component: AdminComponent },
             { path: 'evenementen', redirectTo: 'events', pathMatch: 'full' },            
             { path: 'events', component: EventsComponent },        
             { path: 'photoshoots', component: PhotoshootsComponent },
