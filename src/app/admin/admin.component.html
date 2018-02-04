@@ -1,4 +1,6 @@
 <h2>Adminpanel</h2>
-<div *ngFor="let photo of project365photos">
-    <project365-photo [photo]="photo"></project365-photo>
-</div>
+<form #project365Form="ngForm">
+    <div *ngFor="let photo of (project365photos | limit:10)">
+        <project365-photo [photo]="photo"></project365-photo>
+    </div>
+</form>

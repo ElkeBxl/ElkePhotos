@@ -10,7 +10,7 @@ import { Project365Photo } from '../models/project365photo';
 })
 export class AdminComponent implements OnInit {
 
-    public project365photos: Array<Project365Photo>;
+    public project365photos: Project365Photo[] = [];
 
     constructor(@Inject(PHOTO_SERVICE_TOKEN) private photoService: IPhotoService) { }
 

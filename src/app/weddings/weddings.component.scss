@@ -1,7 +1,9 @@
+@import '../../sass/_variables';
+
 aside {
     ul {
         list-style: none;
-        padding: 0;
+        padding-left: 10px;
     }
 
     ul li {
@@ -12,7 +14,21 @@ aside {
         padding-right: 5px;
 
         &.active {
-            border-right: 3px solid rgba(255, 0, 0, 0.5);
+            border-right: 3px solid $color-weddings-transparent;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    aside ul {
+        background: $color-weddings;
+
+        li {
+            color: white;
+        }
+
+        &.active {
+            border-right: 3px solid white;
         }
     }
 }

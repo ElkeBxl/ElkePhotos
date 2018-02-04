@@ -195,7 +195,7 @@ nav.dropdown {
     }
 
     p {
-        font-size: 11pt;
+        font-size: 10pt;
         line-height: 18pt;
         margin: 12pt 0;
     }
@@ -249,5 +249,18 @@ nav.dropdown {
         z-index: 5000;
         border-radius: 25px;
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    aside ul {
+        box-shadow: 2px 2px 5px 3px #ddd;    
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: black;
+        z-index: 1000;
     }
 }

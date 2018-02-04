@@ -34,6 +34,7 @@ export class RotatingPhotosComponent implements OnInit {
 
     @Input('location') location: string = '';
     current: number;
+    @Input('color') public color: string;
 
     private _handle: number;
 
@@ -42,6 +43,7 @@ export class RotatingPhotosComponent implements OnInit {
     ngOnInit() {
         this.current = 1;
         this.resetInterval();
+        console.log(this.color);
     }
 
     private updatePhoto(): void {

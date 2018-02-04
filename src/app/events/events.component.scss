@@ -1,3 +1,5 @@
+@import '../../sass/_variables';
+
 h2 {
     background-image: url('../../assets/images/events-background-1.jpg');
     background-size: 100% auto;
@@ -11,7 +13,7 @@ h2 {
         bottom: 0;
         right: 0;
         padding: 15px;
-        background: rgba(255, 0, 0, 0.5);
+        background: $color-events-transparent;
         color: white;
         text-transform: uppercase;
         letter-spacing: 3px;
@@ -21,7 +23,7 @@ h2 {
 aside {
     ul {
         list-style: none;
-        padding: 0;
+        padding-left: 10px;
     }
 
     ul li {
@@ -32,7 +34,7 @@ aside {
         padding-right: 5px;
 
         &.active {
-            border-right: 3px solid rgba(255, 0, 0, 0.5);
+            border-right: 3px solid $color-events-transparent;
         }
     }
 
@@ -50,6 +52,20 @@ aside {
             right: 0;
             margin: 5px;
             background: red;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    aside ul {
+        background: $color-events;
+
+        li {
+            color: white;
+        }
+
+        &.active {
+            border-right: 3px solid white;
         }
     }
 }
