@@ -1,5 +1,44 @@
 [
     {
+        "projectday": 827,
+        "day": 4,
+        "month": 2,
+        "year": 2018,
+        "description": "Qasper op de schoot van papa",
+        "exposure": "1/200",
+        "aperture": "f/1,8",
+        "focallength": 50,
+        "fisheye": false,
+        "iso": 4000,
+        "orientation": 1
+    },
+    {
+        "projectday": 826,
+        "day": 3,
+        "month": 2,
+        "year": 2018,
+        "description": "De avond valt over Brussel. De toren van het stadhuis is te zien achter de gebouwen",
+        "exposure": "1/400",
+        "aperture": "f/2,8",
+        "focallength": 50,
+        "fisheye": false,
+        "iso": 5000,
+        "orientation": 2
+    },
+    {
+        "projectday": 825,
+        "day": 2,
+        "month": 2,
+        "year": 2018,
+        "description": "Drag queen performance in La Boule Rouge",
+        "exposure": "1/35",
+        "aperture": "f/2,2",
+        "focallength": 4.15,
+        "fisheye": false,
+        "iso": 200,
+        "orientation": 2
+    },
+    {
         "projectday": 824,
         "day": 1,
         "month": 2,
