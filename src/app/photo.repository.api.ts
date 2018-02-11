@@ -17,7 +17,7 @@ interface AlbumResponse {
 @Injectable()
 export class APIPhotoRepository implements IPhotoRepository {
 
-    private url:string = "http://localhost:8100/api/v1/photos";
+    private url:string = "http://localhost:8181/api/v1/photos";
 
     constructor(private http:HttpClient) { }
 
