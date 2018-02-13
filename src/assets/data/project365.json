@@ -1,5 +1,44 @@
 [
     {
+        "projectday": 836,
+        "day": 13,
+        "month": 2,
+        "year": 2018,
+        "description": "Een nieuwe arbeidsovereenkomst, een nieuw begin vanaf eind maart! Woopwoop!",
+        "exposure": "1/640",
+        "aperture": "f/1,8",
+        "focallength": 50,
+        "fisheye": false,
+        "iso": 500,
+        "orientation": 1
+    },
+    {
+        "projectday": 835,
+        "day": 12,
+        "month": 2,
+        "year": 2018,
+        "description": "Origamiblaadjes gekocht, we gaan eens wat prutsen",
+        "exposure": "1/1000",
+        "aperture": "f/1,8",
+        "focallength": 50,
+        "fisheye": false,
+        "iso": 1250,
+        "orientation": 1
+    },
+    {
+        "projectday": 834,
+        "day": 11,
+        "month": 2,
+        "year": 2018,
+        "description": "Mijn mooie Dr Martens hingen vol met spatjes! Het effect van een glas bier dat naast je voeten kapot valt...",
+        "exposure": "1/125",
+        "aperture": "f/1,8",
+        "focallength": 50,
+        "fisheye": false,
+        "iso": 10000,
+        "orientation": 1
+    },
+    {
         "projectday": 833,
         "day": 10,
         "month": 2,
