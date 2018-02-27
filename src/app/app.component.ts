@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +25,16 @@ export class AppComponent implements OnInit {
         }
     }
 
-    public toggleHamburgerMenu(): void {
+    public toggleHamburgerMenu($event): void {
         this.hamburgerMenuVisible = !this.hamburgerMenuVisible;
+        console.log("Toggled hamburger menu to " + this.hamburgerMenuVisible);
+        $event.stopPropagation();
     }    
+
+    // We want to hide the menu as soon as someone clicks outside of it
+    @HostListener('document:click', ['$event']) clickedOutside($event) {
+        if (this.hamburgerMenuVisible) {
+            this.hamburgerMenuVisible = false;
+        }
+    }
 }

@@ -16,15 +16,15 @@
     </div>
     <nav class="dropdown d-md-none col-12">
         <h1><span><img src="assets/images/logo.png" /></span>Elke.photos</h1>        
-        <fa name="bars" (click)="toggleHamburgerMenu()"></fa>
+        <fa name="bars" (click)="toggleHamburgerMenu($event)"></fa>
         <ul *ngIf="hamburgerMenuVisible">
-            <li><a routerLink="/home" (click)="toggleHamburgerMenu()" routerLinkActive="active" class="home">Home</a></li>
-            <li><a routerLink="/huwelijken" (click)="toggleHamburgerMenu()" routerLinkActive="active" class="weddings">Huwelijken</a></li>
-            <li><a routerLink="/photoshoots" (click)="toggleHamburgerMenu()" routerLinkActive="active" class="photoshoots">Photoshoots</a></li>
-            <li><a routerLink="/evenementen" (click)="toggleHamburgerMenu()" routerLinkActive="active" class="events">Events</a></li>
-            <li><a routerLink="/fuiven" (click)="toggleHamburgerMenu()" routerLinkActive="active" class="parties">Fuiven</a></li>
-            <li><a routerLink="/project365" (click)="toggleHamburgerMenu()" routerLinkActive="active" class="project365">365 project</a></li>
-            <li><a routerLink="/contact" (click)="toggleHamburgerMenu()" routerLinkActive="active" class="contact">Contact</a></li>
+            <li><a routerLink="/home" (click)="toggleHamburgerMenu($event)" routerLinkActive="active" class="home">Home</a></li>
+            <li><a routerLink="/huwelijken" (click)="toggleHamburgerMenu($event)" routerLinkActive="active" class="weddings">Huwelijken</a></li>
+            <li><a routerLink="/photoshoots" (click)="toggleHamburgerMenu($event)" routerLinkActive="active" class="photoshoots">Photoshoots</a></li>
+            <li><a routerLink="/evenementen" (click)="toggleHamburgerMenu($event)" routerLinkActive="active" class="events">Events</a></li>
+            <li><a routerLink="/fuiven" (click)="toggleHamburgerMenu($event)" routerLinkActive="active" class="parties">Fuiven</a></li>
+            <li><a routerLink="/project365" (click)="toggleHamburgerMenu($event)" routerLinkActive="active" class="project365">365 project</a></li>
+            <li><a routerLink="/contact" (click)="toggleHamburgerMenu($event)" routerLinkActive="active" class="contact">Contact</a></li>
         </ul>
     </nav>
     <div class="content col-12 col-md-10 offset-md-2">
