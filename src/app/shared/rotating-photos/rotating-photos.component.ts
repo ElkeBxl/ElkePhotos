@@ -43,7 +43,6 @@ export class RotatingPhotosComponent implements OnInit {
     ngOnInit() {
         this.current = 1;
         this.resetInterval();
-        console.log(this.color);
     }
 
     private updatePhoto(): void {

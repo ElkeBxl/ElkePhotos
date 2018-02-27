@@ -25,14 +25,13 @@ export class AppComponent implements OnInit {
         }
     }
 
-    public toggleHamburgerMenu($event): void {
+    public toggleHamburgerMenu($event: Event): void {
         this.hamburgerMenuVisible = !this.hamburgerMenuVisible;
-        console.log("Toggled hamburger menu to " + this.hamburgerMenuVisible);
         $event.stopPropagation();
     }    
 
     // We want to hide the menu as soon as someone clicks outside of it
-    @HostListener('document:click', ['$event']) clickedOutside($event) {
+    @HostListener('document:click', ['$event']) clickedOutside($event: Event) {
         if (this.hamburgerMenuVisible) {
             this.hamburgerMenuVisible = false;
         }

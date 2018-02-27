@@ -94,7 +94,6 @@ describe('JSONPhotoService', () => {
             mockResult[0].photosCount = 5;
 
             service.getAlbum('testAlbum').then(album => {
-                console.log(album);
                 expect(album).toBeDefined();
                 expect(album.photos).toBeDefined();
                 expect(album.photos.length).toEqual(5);
