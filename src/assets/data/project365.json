@@ -1,5 +1,44 @@
 [
     {
+        "projectday": 849,
+        "day": 26,
+        "month": 2,
+        "year": 2018,
+        "description": "Antwerpse speelgoedauto ring",
+        "exposure": "1/1250",
+        "aperture": "f/1,8",
+        "focallength": 50,
+        "fisheye": false,
+        "iso": 320,
+        "orientation": 1
+    },
+    {
+        "projectday": 848,
+        "day": 25,
+        "month": 2,
+        "year": 2018,
+        "description": "Qasper!",
+        "exposure": "1/80",
+        "aperture": "f/2,8",
+        "focallength": 100,
+        "fisheye": false,
+        "iso": 2500,
+        "orientation": 1
+    },
+    {
+        "projectday": 847,
+        "day": 24,
+        "month": 2,
+        "year": 2018,
+        "description": "Vroeg moeten opstaan voor dit shot en volledig bevroren. But worth it!",
+        "exposure": "1/8",
+        "aperture": "f/32",
+        "focallength": 100,
+        "fisheye": false,
+        "iso": 100,
+        "orientation": 1
+    },
+    {
         "projectday": 846,
         "day": 23,
         "month": 2,
