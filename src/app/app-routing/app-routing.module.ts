@@ -23,7 +23,7 @@ import { AdminComponent } from '../admin/admin.component';
 export class AppRoutingModule { 
     public static getRoutes(): Routes {
         return [
-            { path: 'admin', component: AdminComponent },
+            //{ path: 'admin', component: AdminComponent },
             { path: 'evenementen', redirectTo: 'events', pathMatch: 'full' },            
             { path: 'events', component: EventsComponent },        
             { path: 'photoshoots', component: PhotoshootsComponent },

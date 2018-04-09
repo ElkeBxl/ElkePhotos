@@ -1,5 +1,9 @@
 <p *ngIf="message">{{message}}</p>
 <h2 class="weddings">{{album?.title}}</h2>
 <masonry [options]="myOptions" #masonryplaceholder style="opacity: 0">
-    <masonry-brick class="brick" *ngFor="let brick of loadedBricks"><img [src]="getUrl(brick)" class="img-fluid" /></masonry-brick>
+    <masonry-brick class="brick" *ngFor="let brick of loadedBricks">
+        <generic-thumbnail [image]="getUrl(brick)" [contentStylings]="{'background-image': 'url(' + getUrl(brick) + ')' }">
+            <img [src]="getUrl(brick)" class="img-fluid" />
+        </generic-thumbnail>
+    </masonry-brick>
 </masonry>

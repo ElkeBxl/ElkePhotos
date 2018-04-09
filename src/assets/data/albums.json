@@ -1,5 +1,16 @@
 [
 {
+    "id": "springbootanniversaryordina",
+    "title": "Spring Boot anniversary event te Ordina",
+    "photosCount": 54,
+    "folder": "20180405-springbootanniversaryordina",
+    "category": "event",
+    "thumbnail": 1,
+    "password": "",
+    "hidden": false,
+    "highquality": true
+},
+{
 	"id": "pasgeborenmattheo",
 	"title": "Pasgeboren Mattheo",
 	"photosCount": 13,

@@ -32,7 +32,8 @@ import { environment } from '../../environments/environment';
         SidebarThumbnailComponent,
         InPageNavigationDirective,
         MasonryModule,
-        AngularFontAwesomeModule
+        AngularFontAwesomeModule,
+        GenericThumbnailComponent
     ],
     providers: [
         { provide: PHOTO_SERVICE_TOKEN, useClass: PhotoService },
