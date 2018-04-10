@@ -200,10 +200,11 @@ nav.dropdown {
         margin: 12pt 0;
     }
 
-    sidebar-thumbnail {
-        overflow: hidden;
-        padding: 10px;
-    }
+	// TODO: see to move this somewhere else? Feels dirty
+	app-sidebar-thumbnail {
+		overflow: hidden;
+		padding: 10px;
+	}
 
     a {
         color: inherit;

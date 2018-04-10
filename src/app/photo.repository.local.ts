@@ -1,23 +1,11 @@
 import { IPhotoRepository } from './photo.repository';
 import { Injectable, Inject } from '@angular/core';
-import { Http } from '@angular/http';
 import { Photo } from './models/photo';
 import { Project365Photo } from './models/project365photo';
-import { HttpClient } from '@angular/common/http';
 import { Album } from './models/album';
-
-interface Project365ItemsResponse {
-	results: Project365Photo[];
-}
-
-interface AlbumResponse {
-	results: Album[];
-}
 
 @Injectable()
 export class LocalPhotoRepository implements IPhotoRepository {
-
-	constructor(private http: HttpClient) { }
 
 	getAlbum(name: string): Promise<Album> {
 		if (!name) {
@@ -62,7 +50,4 @@ export class LocalPhotoRepository implements IPhotoRepository {
 		});
 	}
 
-	private handleError(error: any): Promise<any> {
-		return Promise.reject(error.message || error);
-	}
 }

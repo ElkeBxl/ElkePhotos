@@ -16,8 +16,8 @@ export class AdminComponent implements OnInit {
 
 	ngOnInit() {
 		this.photoService.getProject365().then(
-			(photos) => this.project365photos = photos
-		).catch((reason) => console.log(reason));
+			photos => this.project365photos = photos
+		).catch(reason => console.log(reason));
 	}
 
 }
