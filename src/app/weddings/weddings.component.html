@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-9">
-        <rotating-photos [color]="'rgba(206,53,51,0.5)'" [amount]="5" [location]="'assets/images/weddings-background'">Huwelijksfotografie</rotating-photos>
+        <app-rotating-photos [color]="'rgba(206,53,51,0.5)'" [amount]="5" [location]="'assets/images/weddings-background'">Huwelijksfotografie</app-rotating-photos>
         <h3 id="most-beautiful-day">De mooiste dag van je leven, voor eeuwig vastgelegd!</h3>
         <p>Trouwen met de ware is een prachtig moment. Het is een unieke dag in je leven die je voor altijd zal bij blijven. Het is een dag waar je vaak op zal terugkijken. En daar horen natuurlijk goede foto's bij!</p>
         <h3 id="before-the-wedding">Wat gebeurt er vooraf</h3>
@@ -17,7 +17,7 @@
         <p>Op een gemiddelde trouw trek ik al snel een paar duizend foto's. Ik maak daar zelf een selectie van die ik allemaal bewerk op mijn manier. Deze manier kan op voorhand al besproken zijn: willen jullie wat meer zwart/wit foto's, houden jullie eerder van heel kleurrijke foto's, laten jullie mij mijn ding doen, ...?<img src="assets/images/inline/wedding-results.jpg" align="left" class="left" /> Ik zorg dat ik alle mooie momentjes zo goed mogelijk laat overkomen. Zodra ik klaar ben met de bewerking, kunnen we eens samen zitten om de resultaten te bekijken. Van zodra jullie tevreden zijn, zorg ik ervoor dat jullie alle foto's in de hoogst mogelijke kwaliteit krijgen. Indien gewenst help ik ook met bepaalde foto's af te drukken. Dit alles kan op de tijdspanne van een week gebeuren. Ik hou er namelijk van om zo snel mogelijk resultaat te tonen. Ik stuur zelfs de dag na jullie huwelijk al een kleine preview van een tiental foto's. Het ideale moment om die te gebruiken op bv. sociale media om iedereen voor hun aanwezigheid te bedanken.</p>
     </div>
     <aside class="col-md-3">
-        <ul inpagenavigation>
+        <ul appInPageNavigation>
             <li><a href="#most-beautiful-day">De mooiste dag</a></li>
             <li><a href="#before-the-wedding">Vooraf</a></li>
             <li><a href="#the-morning-of-the-wedding">De start van de dag</a></li>
@@ -26,12 +26,12 @@
             <li><a href="#dinner-and-wedding-party">Het feest</a></li>
             <li><a href="#wedding-photos-results">Achteraf</a></li>
         </ul>
-        <div class="row">
-            <sidebar-thumbnail class="col-6" [image]="'assets/images/weddings-background-1.jpg'"></sidebar-thumbnail>
-            <sidebar-thumbnail class="col-6" [image]="'assets/images/weddings-background-2.jpg'"></sidebar-thumbnail>
-            <sidebar-thumbnail class="col-6" [image]="'assets/images/weddings-background-3.jpg'"></sidebar-thumbnail>
-            <sidebar-thumbnail class="col-6" [image]="'assets/images/weddings-background-4.jpg'"></sidebar-thumbnail>
-            <sidebar-thumbnail class="col-6" [image]="'assets/images/weddings-background-5.jpg'"></sidebar-thumbnail>
+        <div app-class="row">
+            <app-sidebar-thumbnail class="col-6" [image]="'assets/images/weddings-background-1.jpg'"></app-sidebar-thumbnail>
+            <app-sidebar-thumbnail class="col-6" [image]="'assets/images/weddings-background-2.jpg'"></app-sidebar-thumbnail>
+            <app-sidebar-thumbnail class="col-6" [image]="'assets/images/weddings-background-3.jpg'"></app-sidebar-thumbnail>
+            <app-sidebar-thumbnail class="col-6" [image]="'assets/images/weddings-background-4.jpg'"></app-sidebar-thumbnail>
+            <app-sidebar-thumbnail class="col-6" [image]="'assets/images/weddings-background-5.jpg'"></app-sidebar-thumbnail>
         </div>
     </aside>
 </div>

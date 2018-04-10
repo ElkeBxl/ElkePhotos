@@ -5,15 +5,15 @@ import { SharedModule } from '../shared/shared.module';
 import { PhotoService } from '../photo.service';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        SharedModule
-    ],
-    declarations: [
-        AlbumComponent
-    ],
-    exports: [
-        AlbumComponent
-    ]
+	imports: [
+		CommonModule,
+		SharedModule
+	],
+	declarations: [
+		AlbumComponent
+	],
+	exports: [
+		AlbumComponent
+	]
 })
 export class AlbumModule { }

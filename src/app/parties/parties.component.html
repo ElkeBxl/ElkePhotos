@@ -1,6 +1,6 @@
 <div class="row">
         <div class="col-md-9">
-            <rotating-photos [color]="'rgba(11,67,145,0.5)'" [amount]="4" [location]="'assets/images/parties-background'">{{pageTitle}}</rotating-photos>      
+            <app-rotating-photos [color]="'rgba(11,67,145,0.5)'" [amount]="4" [location]="'assets/images/parties-background'">{{pageTitle}}</app-rotating-photos>      
             <h3 id="epic-party-pictures">Een episch feest verdient epische fotos!</h3>
             <p>Op zoek naar iemand die fotos kan trekken op jouw fuif? Een groots event in een fuifzaal? Een leuk feest van de vereniging? Een tof dansfeest? Ik kan je helpen met geweldige fotos te maken!</p>
             <h3 id="party-how-i-work">Hoe ik al die mooie fotos trek</h3>
@@ -13,7 +13,7 @@
             <p>Op het moment dat we een akkoord bereiken over de tijd en prijs van de opdracht zullen we ook al een paar afspraken maken. Zoals welke soort fotos u vooral wil. Wilt u meer groepsfotos of meer sfeerfotos of wat fotos achter de schermen of eerder een mix van vanalles? Alles is bespreekbaar.</p>
         </div>
         <aside class="col-md-3">
-            <ul inpagenavigation>
+            <ul appInPageNavigation>
                 <li><a href="#epic-party-pictures">Fuiffotos</a></li>
                 <li><a href="#party-how-i-work">Hoe ik werk</a></li>
                 <li><a href="#party-quick-results">Snelle oplevering</a></li>
@@ -21,10 +21,10 @@
                 <li><a href="#party-script">Afspraken vooraf</a></li>
             </ul>
             <div class="row">
-                <sidebar-thumbnail class="col-6" [image]="'assets/images/parties-background-1.jpg'"></sidebar-thumbnail>
-                <sidebar-thumbnail class="col-6" [image]="'assets/images/parties-background-2.jpg'"></sidebar-thumbnail>
-                <sidebar-thumbnail class="col-6" [image]="'assets/images/parties-background-3.jpg'"></sidebar-thumbnail>
-                <sidebar-thumbnail class="col-6" [image]="'assets/images/parties-background-4.jpg'"></sidebar-thumbnail>
+                <app-sidebar-thumbnail class="col-6" [image]="'assets/images/parties-background-1.jpg'"></app-sidebar-thumbnail>
+                <app-sidebar-thumbnail class="col-6" [image]="'assets/images/parties-background-2.jpg'"></app-sidebar-thumbnail>
+                <app-sidebar-thumbnail class="col-6" [image]="'assets/images/parties-background-3.jpg'"></app-sidebar-thumbnail>
+                <app-sidebar-thumbnail class="col-6" [image]="'assets/images/parties-background-4.jpg'"></app-sidebar-thumbnail>
             </div>
         </aside>
     </div>

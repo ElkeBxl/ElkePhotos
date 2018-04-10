@@ -1,6 +1,6 @@
 <h2>Adminpanel</h2>
 <form #project365Form="ngForm">
     <div *ngFor="let photo of (project365photos | limit:10)">
-        <project365-photo [photo]="photo"></project365-photo>
+        <app-project365-photo [photo]="photo"></app-project365-photo>
     </div>
 </form>

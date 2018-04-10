@@ -9,15 +9,15 @@ import { Project365PhotoComponent } from './project365-photo/project365-photo.co
 import { PhotoService } from '../photo.service';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    Project365RoutingModule
-  ],
-  providers: [
-      PhotoService
-  ],
-  declarations: [Project365Component, Project365PhotoComponent],
-  exports: [Project365Component]
+	imports: [
+		CommonModule,
+		SharedModule,
+		Project365RoutingModule
+	],
+	providers: [
+		PhotoService
+	],
+	declarations: [Project365Component, Project365PhotoComponent],
+	exports: [Project365Component]
 })
 export class Project365Module { }

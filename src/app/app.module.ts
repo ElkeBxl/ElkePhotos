@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -35,21 +35,20 @@ registerLocaleData(localenlBE);
 		HttpClientModule,
 		FormsModule,
 		SharedModule,
-        Project365Module,
-        HomeModule,
-        AppRoutingModule,
-        WeddingsModule,
-        EventsModule,
-        PartiesModule,
-        PhotoshootsModule,
-        ContactModule,
-        AlbumModule
-    ],
-    providers: [
-        { provide: APP_BASE_HREF, useValue : '/' },
-        { provide: LOCALE_ID, useValue: 'nl-be' }
-        
-    ],
+		Project365Module,
+		HomeModule,
+		AppRoutingModule,
+		WeddingsModule,
+		EventsModule,
+		PartiesModule,
+		PhotoshootsModule,
+		ContactModule,
+		AlbumModule
+	],
+	providers: [
+		{ provide: APP_BASE_HREF, useValue : '/' },
+		{ provide: LOCALE_ID, useValue: 'nl-be' }
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

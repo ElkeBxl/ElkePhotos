@@ -5,101 +5,100 @@ import { Renderer2 } from '@angular/core/src/render/api';
 import { Router } from '@angular/router';
 
 export class HomePhoto {
-    public filename: string;
-    public albumname: string;
+	public filename: string;
+	public albumname: string;
 
-    constructor(filename: string, albumname: string) {
-        this.filename = filename;
-        this.albumname = albumname;
-    }
+	constructor(filename: string, albumname: string) {
+		this.filename = filename;
+		this.albumname = albumname;
+	}
 }
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: [
-        './home.component.scss'
-    ]
+	selector: 'app-home',
+	templateUrl: './home.component.html',
+	styleUrls: [
+		'./home.component.scss'
+	]
 })
 export class HomeComponent implements OnInit {
 
-    @ViewChild("masonryplaceholder", {read: ElementRef}) masonryPlaceholder: ElementRef;
-    @ViewChild("preloader", {read: ElementRef}) preloader: ElementRef;
-    
-    bricks: HomePhoto[] = [
-        new HomePhoto('photoshoots-background-1.jpg', 'photoshootpriyanka'),
-        new HomePhoto('photoshoots-background-2.jpg', 'zwangerschapshootdelphi'),
-        new HomePhoto('photoshoots-background-3.jpg', 'pasgeborenmattheo'),
-        new HomePhoto('photoshoots-background-4.jpg', ''),
-        new HomePhoto('photoshoots-background-5.jpg', ''),
-        new HomePhoto('weddings-background-1.jpg', 'huwelijkevelyneeric'),
-        new HomePhoto('weddings-background-2.jpg', 'burgerlijkhuwelijkevelynthibaud'),
-        new HomePhoto('weddings-background-3.jpg', 'huwelijkevelynthibaud'),
-        new HomePhoto('weddings-background-4.jpg', 'huwelijkdorienhannah'),
-        new HomePhoto('weddings-background-5.jpg', 'huwelijkdorienhannah'),
-        new HomePhoto('parties-background-1.jpg', 'duveltd2015'),
-        new HomePhoto('parties-background-2.jpg', 'duveltd2016'),
-        new HomePhoto('parties-background-3.jpg', 'horspistetd2017'),
-        new HomePhoto('parties-background-4.jpg', 'cocktailnightvrg2017')
-    ];
+	@ViewChild('masonryplaceholder', {read: ElementRef}) masonryPlaceholder: ElementRef;
+	@ViewChild('preloader', {read: ElementRef}) preloader: ElementRef;
 
-    loadedBricks: HomePhoto[] = [];
+	bricks: HomePhoto[] = [
+		new HomePhoto('photoshoots-background-1.jpg', 'photoshootpriyanka'),
+		new HomePhoto('photoshoots-background-2.jpg', 'zwangerschapshootdelphi'),
+		new HomePhoto('photoshoots-background-3.jpg', 'pasgeborenmattheo'),
+		new HomePhoto('photoshoots-background-4.jpg', ''),
+		new HomePhoto('photoshoots-background-5.jpg', ''),
+		new HomePhoto('weddings-background-1.jpg', 'huwelijkevelyneeric'),
+		new HomePhoto('weddings-background-2.jpg', 'burgerlijkhuwelijkevelynthibaud'),
+		new HomePhoto('weddings-background-3.jpg', 'huwelijkevelynthibaud'),
+		new HomePhoto('weddings-background-4.jpg', 'huwelijkdorienhannah'),
+		new HomePhoto('weddings-background-5.jpg', 'huwelijkdorienhannah'),
+		new HomePhoto('parties-background-1.jpg', 'duveltd2015'),
+		new HomePhoto('parties-background-2.jpg', 'duveltd2016'),
+		new HomePhoto('parties-background-3.jpg', 'horspistetd2017'),
+		new HomePhoto('parties-background-4.jpg', 'cocktailnightvrg2017')
+	];
 
-    public myOptions: MasonryOptions = { 
-        transitionDuration: '0.8s',
-        gutter: 10
-    };
+	loadedBricks: HomePhoto[] = [];
 
-    constructor(private renderer: Renderer, private router: Router) { }
+	public myOptions: MasonryOptions = {
+		transitionDuration: '0.8s',
+		gutter: 10
+	};
 
-    ngOnInit() {
-        this.randomize();
-        this.reload();      
-    }
+	private numberOfImagesLoaded = 0;
 
-    private reload(): void {
-        this.bricks.forEach(brick => {
-            if (!this.loadedBricks.includes(brick))
-            {
-                let img = new Image();
-                img.onload = () => this.onImageLoaded(brick);
-                img.src = 'assets/images/' + brick.filename;
-            }
-        });  
-    }
+	constructor(private renderer: Renderer, private router: Router) { }
 
-    private getRandom(floor: number, ceiling: number): number {
-        return Math.floor(Math.random() * (ceiling - floor + 1)) + floor;
-    }
+	ngOnInit() {
+		this.randomize();
+		this.reload();
+	}
 
-    private randomize(): void {
-        for (let i = 0; i < this.bricks.length; i++) {
-            const randomChoiceIndex = this.getRandom(i, this.bricks.length - 1);
-            [this.bricks[i], this.bricks[randomChoiceIndex]] = [this.bricks[randomChoiceIndex], this.bricks[i]];
-        }
-    }
+	private reload(): void {
+		this.bricks.forEach(brick => {
+			if (!this.loadedBricks.includes(brick)) {
+				const img = new Image();
+				img.onload = () => this.onImageLoaded(brick);
+				img.src = 'assets/images/' + brick.filename;
+			}
+		});
+	}
 
-    public setBricks(bricks: HomePhoto[]): void {
-        this.bricks = bricks;
-        this.randomize();
-        this.reload();
-    }
+	private getRandom(floor: number, ceiling: number): number {
+		return Math.floor(Math.random() * (ceiling - floor + 1)) + floor;
+	}
 
-    private numberOfImagesLoaded: number = 0;
-    onImageLoaded(brick: HomePhoto): void {
-        this.numberOfImagesLoaded++;
-        if (this.numberOfImagesLoaded == this.bricks.length)
-        {   
-            this.loadedBricks = this.bricks;
-            setTimeout(() => 
-                this.renderer.setElementStyle(this.masonryPlaceholder.nativeElement, "opacity", "1"),
-                250);
-        }
-    }
+	private randomize(): void {
+		for (let i = 0; i < this.bricks.length; i++) {
+			const randomChoiceIndex = this.getRandom(i, this.bricks.length - 1);
+			[this.bricks[i], this.bricks[randomChoiceIndex]] = [this.bricks[randomChoiceIndex], this.bricks[i]];
+		}
+	}
 
-    public openAlbum(albumname: string): void {
-        if (albumname && albumname.length > 0) {
-            this.router.navigate(['album', albumname]);
-        }
-    }
+	public setBricks(bricks: HomePhoto[]): void {
+		this.bricks = bricks;
+		this.randomize();
+		this.reload();
+	}
+
+	onImageLoaded(brick: HomePhoto): void {
+		this.numberOfImagesLoaded++;
+		if (this.numberOfImagesLoaded === this.bricks.length) {
+			this.loadedBricks = this.bricks;
+			setTimeout(() =>
+				this.renderer.setElementStyle(this.masonryPlaceholder.nativeElement, 'opacity', '1'),
+				250);
+		}
+	}
+
+	public openAlbum(albumname: string): void {
+		if (albumname && albumname.length > 0) {
+			this.router.navigate(['album', albumname]);
+		}
+	}
 }

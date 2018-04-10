@@ -18,34 +18,33 @@ import { APIPhotoRepository } from '../photo.repository.api';
 import { environment } from '../../environments/environment';
 
 @NgModule({
-    imports: [        
-        CommonModule,
-        NgbModule.forRoot(),
-        MasonryModule,
-        AngularFontAwesomeModule
-    ],
-    exports: [
-        NgbModule,
-        LimitPipe, 
-        PhotoComponent, 
-        RotatingPhotosComponent,
-        SidebarThumbnailComponent,
-        InPageNavigationDirective,
-        MasonryModule,
-        AngularFontAwesomeModule,
-        GenericThumbnailComponent
-    ],
-    providers: [
-        { provide: PHOTO_SERVICE_TOKEN, useClass: PhotoService },
-        { provide: PHOTO_REPOSITORY_TOKEN, useClass: (environment.production ? JSONPhotoRepository : APIPhotoRepository) } 
-    ],
-    declarations: [
-        LimitPipe, 
-        PhotoComponent, 
-        RotatingPhotosComponent, 
-        GenericThumbnailComponent, 
-        SidebarThumbnailComponent, 
-        InPageNavigationDirective
-    ]
+	imports: [
+		CommonModule,
+		NgbModule.forRoot(),
+		MasonryModule,
+		AngularFontAwesomeModule
+	],
+	exports: [
+		NgbModule,
+		LimitPipe,
+		PhotoComponent,
+		RotatingPhotosComponent,
+		SidebarThumbnailComponent,
+		InPageNavigationDirective,
+		MasonryModule,
+		AngularFontAwesomeModule
+	],
+	providers: [
+		{ provide: PHOTO_SERVICE_TOKEN, useClass: PhotoService },
+		{ provide: PHOTO_REPOSITORY_TOKEN, useClass: (environment.production ? JSONPhotoRepository : APIPhotoRepository) }
+	],
+	declarations: [
+		LimitPipe,
+		PhotoComponent,
+		RotatingPhotosComponent,
+		GenericThumbnailComponent,
+		SidebarThumbnailComponent,
+		InPageNavigationDirective
+	]
 })
 export class SharedModule { }

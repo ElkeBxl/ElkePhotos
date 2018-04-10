@@ -5,11 +5,11 @@ import { SharedModule } from '../shared/shared.module';
 import { MasonryModule } from 'angular2-masonry';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        SharedModule,
-        MasonryModule
-    ],
-    declarations: [ HomeComponent ]
+	imports: [
+		CommonModule,
+		SharedModule,
+		MasonryModule
+	],
+	declarations: [ HomeComponent ]
 })
 export class HomeModule { }
