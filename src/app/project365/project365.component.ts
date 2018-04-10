@@ -20,7 +20,7 @@ export class Project365Component implements OnInit, AfterViewInit {
 	}
 
 	ngOnInit() {
-		this.photoService.getProject365().then(res => this.photos = res);
+		this.photoService.getProject365().then(res => { console.log(res); this.photos = res; });
 	}
 
 	ngAfterViewInit() {

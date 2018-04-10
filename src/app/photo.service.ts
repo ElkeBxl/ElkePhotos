@@ -1,6 +1,7 @@
 import { Injectable, Inject } from '@angular/core';
 
 import { JSONPhotoRepository } from './photo.repository.json';
+import { LocalPhotoRepository } from './photo.repository.local';
 import { APIPhotoRepository } from './photo.repository.api';
 import { PHOTO_REPOSITORY_TOKEN } from './photo.repository.token';
 import { Project365Photo } from './models/project365photo';

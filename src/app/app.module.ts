@@ -24,6 +24,7 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap/modal/modal.module';
 import { AlbumModule } from './album/album.module';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { PhotoService } from './photo.service';
+import { AdminModule } from './admin/admin.module';
 registerLocaleData(localenlBE);
 
 @NgModule({
@@ -43,7 +44,8 @@ registerLocaleData(localenlBE);
 		PartiesModule,
 		PhotoshootsModule,
 		ContactModule,
-		AlbumModule
+		AlbumModule,
+		AdminModule
 	],
 	providers: [
 		{ provide: APP_BASE_HREF, useValue : '/' },

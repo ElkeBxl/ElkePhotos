@@ -15,6 +15,7 @@ import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
 import { PHOTO_REPOSITORY_TOKEN } from '../photo.repository.token';
 import { JSONPhotoRepository } from '../photo.repository.json';
 import { APIPhotoRepository } from '../photo.repository.api';
+import { LocalPhotoRepository } from '../photo.repository.local';
 import { environment } from '../../environments/environment';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { environment } from '../../environments/environment';
 		LimitPipe,
 		PhotoComponent,
 		RotatingPhotosComponent,
+		GenericThumbnailComponent,
 		SidebarThumbnailComponent,
 		InPageNavigationDirective,
 		MasonryModule,
@@ -36,7 +38,7 @@ import { environment } from '../../environments/environment';
 	],
 	providers: [
 		{ provide: PHOTO_SERVICE_TOKEN, useClass: PhotoService },
-		{ provide: PHOTO_REPOSITORY_TOKEN, useClass: (environment.production ? JSONPhotoRepository : APIPhotoRepository) }
+		{ provide: PHOTO_REPOSITORY_TOKEN, useClass: (environment.production ? JSONPhotoRepository : LocalPhotoRepository) }
 	],
 	declarations: [
 		LimitPipe,
