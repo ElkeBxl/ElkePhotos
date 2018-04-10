@@ -42,5 +42,7 @@ testem.log
 Thumbs.db
 
 # My pictures
-/src/assets/images/365
+/src/assets/images/365/*
+!/src/assets/images/365/201511*
 /src/assets/images/albums/*
+!/src/assets/images/albums/20170605-doel
