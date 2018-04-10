@@ -1,20 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-parties',
-    templateUrl: './parties.component.html',
-    styleUrls: [
-        './parties.component.scss'
-    ]
+	selector: 'app-parties',
+	templateUrl: './parties.component.html',
+	styleUrls: [
+		'./parties.component.scss'
+	]
 })
-export class PartiesComponent implements OnInit {
+export class PartiesComponent {
 
-    pageTitle: string = 'Fuiven';
-
-    constructor() {
-    }
-
-    ngOnInit() {
-    }
+	pageTitle = 'Fuiven';
 
 }

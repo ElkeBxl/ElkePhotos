@@ -1,6 +1,6 @@
 <div class="row">
         <div class="col-md-9">
-            <rotating-photos [color]="'rgba(214,132,4,0.5)'" [amount]="5" [location]="'assets/images/photoshoots-background'">{{pageTitle}}</rotating-photos>      
+            <app-rotating-photos [color]="'rgba(214,132,4,0.5)'" [amount]="5" [location]="'assets/images/photoshoots-background'">{{pageTitle}}</app-rotating-photos>      
             <h3 id="beautiful-photoshoot">Je ziet er prachtig uit!</h3>
             <p>Een photoshoot kan gemaakt worden voor allerlei redenen. Misschien heb je zin in een nieuwe profielfoto op social media? Of willen jullie van het hele gezin of de gehele familie eens mooie fotos laten maken? Of gewoon voor de fun eens lekker poseren voor de camera? Er zijn genoeg redenen te bedenken waarom je eens kan aankloppen bij mij voor een photoshoot.</p>
             <h3 id="photoshoot-how-i-work">Hoe het allemaal in zijn werk gaat</h3>
@@ -13,7 +13,7 @@
             <p>Om zeker te zijn dat u alle fotos krijgt die u verwacht, stel ik op voorhand een draaiboek op. Dit kan heel eenvoudigweg een overzicht zijn van alle poses en scenarios waarin we fotos gaan trekken maar kan ook meer info bevatten zoals details over de locatie. Dit stel ik op samen met de offerte zodat u exact weet wat te verwachten op de dag van de photoshoot zelf. Op de photoshoot zelf kan er natuurlijk altijd spontaan iets veranderd worden aan het draaiboek, zoals een paar extra fotos.</p>
         </div>
         <aside class="col-md-3">
-            <ul inpagenavigation>
+            <ul appInPageNavigation>
                 <li><a href="#beautiful-photoshoot">Prachtige photoshoot</a></li>
                 <li><a href="#photoshoot-how-i-work">Hoe ik werk</a></li>
                 <li><a href="#photoshoot-quick-results">Snelle oplevering</a></li>
@@ -21,11 +21,11 @@
                 <li><a href="#photoshoot-script">Afspraken vooraf</a></li>
             </ul>
             <div class="row">
-                <sidebar-thumbnail class="col-6" [image]="'assets/images/photoshoots-background-1.jpg'"></sidebar-thumbnail>
-                <sidebar-thumbnail class="col-6" [image]="'assets/images/photoshoots-background-2.jpg'"></sidebar-thumbnail>
-                <sidebar-thumbnail class="col-6" [image]="'assets/images/photoshoots-background-3.jpg'"></sidebar-thumbnail>
-                <sidebar-thumbnail class="col-6" [image]="'assets/images/photoshoots-background-4.jpg'"></sidebar-thumbnail>
-                <sidebar-thumbnail class="col-6" [image]="'assets/images/photoshoots-background-5.jpg'"></sidebar-thumbnail>
+                <app-sidebar-thumbnail class="col-6" [image]="'assets/images/photoshoots-background-1.jpg'"></app-sidebar-thumbnail>
+                <app-sidebar-thumbnail class="col-6" [image]="'assets/images/photoshoots-background-2.jpg'"></app-sidebar-thumbnail>
+                <app-sidebar-thumbnail class="col-6" [image]="'assets/images/photoshoots-background-3.jpg'"></app-sidebar-thumbnail>
+                <app-sidebar-thumbnail class="col-6" [image]="'assets/images/photoshoots-background-4.jpg'"></app-sidebar-thumbnail>
+                <app-sidebar-thumbnail class="col-6" [image]="'assets/images/photoshoots-background-5.jpg'"></app-sidebar-thumbnail>
             </div>
         </aside>
     </div>

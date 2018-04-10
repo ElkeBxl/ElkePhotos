@@ -6,11 +6,11 @@ import { Project365PhotoComponent } from './project365-photo/project365-photo.co
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        SharedModule,
-        FormsModule
-    ],
-    declarations: [AdminComponent, Project365PhotoComponent]
+	imports: [
+		CommonModule,
+		SharedModule,
+		FormsModule
+	],
+	declarations: [AdminComponent, Project365PhotoComponent]
 })
 export class AdminModule { }

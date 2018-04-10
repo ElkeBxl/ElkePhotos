@@ -11,32 +11,32 @@ import { EventsComponent } from '../events/events.component';
 import { ContactComponent } from '../contact/contact.component';
 import { AlbumComponent } from '../album/album.component';
 import { AdminComponent } from '../admin/admin.component';
-  
+
 @NgModule({
-    imports: [
-        RouterModule.forRoot(AppRoutingModule.getRoutes(), { useHash: false })
-    ],
-    exports: [
-        RouterModule
-    ]
+	imports: [
+		RouterModule.forRoot(AppRoutingModule.getRoutes(), { useHash: false })
+	],
+	exports: [
+		RouterModule
+	]
 })
-export class AppRoutingModule { 
-    public static getRoutes(): Routes {
-        return [
-            { path: 'admin', component: AdminComponent },
-            { path: 'evenementen', redirectTo: 'events', pathMatch: 'full' },            
-            { path: 'events', component: EventsComponent },        
-            { path: 'photoshoots', component: PhotoshootsComponent },
-            { path: 'fuiven', redirectTo: 'parties', pathMatch: 'full' },            
-            { path: 'parties', component: PartiesComponent },
-            { path: 'huwelijken', redirectTo: 'weddings', pathMatch: 'full' },            
-            { path: 'weddings', component: WeddingsComponent },
-            { path: 'project365', component: Project365Component },
-            { path: 'contact', component: ContactComponent },            
-            { path: 'home', component: HomeComponent },
-            { path: 'album/:name', component: AlbumComponent, },
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
-            { path: '**', component: HomeComponent }
-        ];
-    }
+export class AppRoutingModule {
+	public static getRoutes(): Routes {
+		return [
+			{ path: 'admin', component: AdminComponent },
+			{ path: 'evenementen', redirectTo: 'events', pathMatch: 'full' },
+			{ path: 'events', component: EventsComponent },
+			{ path: 'photoshoots', component: PhotoshootsComponent },
+			{ path: 'fuiven', redirectTo: 'parties', pathMatch: 'full' },
+			{ path: 'parties', component: PartiesComponent },
+			{ path: 'huwelijken', redirectTo: 'weddings', pathMatch: 'full' },
+			{ path: 'weddings', component: WeddingsComponent },
+			{ path: 'project365', component: Project365Component },
+			{ path: 'contact', component: ContactComponent },
+			{ path: 'home', component: HomeComponent },
+			{ path: 'album/:name', component: AlbumComponent, },
+			{ path: '', redirectTo: 'home', pathMatch: 'full' },
+			{ path: '**', component: HomeComponent }
+		];
+	}
 }

@@ -4,20 +4,20 @@ import { IPhotoService } from '../photo.service';
 import { Project365Photo } from '../models/project365photo';
 
 @Component({
-    selector: 'app-admin',
-    templateUrl: './admin.component.html',
-    styleUrls: ['./admin.component.scss']
+	selector: 'app-admin',
+	templateUrl: './admin.component.html',
+	styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
 
-    public project365photos: Project365Photo[] = [];
+	public project365photos: Project365Photo[] = [];
 
-    constructor(@Inject(PHOTO_SERVICE_TOKEN) private photoService: IPhotoService) { }
+	constructor(@Inject(PHOTO_SERVICE_TOKEN) private photoService: IPhotoService) { }
 
-    ngOnInit() {
-        this.photoService.getProject365().then(
-            (photos) => this.project365photos = photos
-        ).catch((reason) => console.log(reason));
-    }
+	ngOnInit() {
+		this.photoService.getProject365().then(
+			(photos) => this.project365photos = photos
+		).catch((reason) => console.log(reason));
+	}
 
 }
