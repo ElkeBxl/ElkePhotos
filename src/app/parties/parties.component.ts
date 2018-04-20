@@ -7,8 +7,4 @@ import { Component, OnInit } from '@angular/core';
 		'./parties.component.scss'
 	]
 })
-export class PartiesComponent {
-
-	pageTitle = 'Fuiven';
-
-}
+export class PartiesComponent {}

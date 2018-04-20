@@ -7,8 +7,4 @@ import { Component, OnInit } from '@angular/core';
 		'./events.component.scss'
 	]
 })
-export class EventsComponent {
-
-	pageTitle = 'Evenementen';
-
-}
+export class EventsComponent {}
