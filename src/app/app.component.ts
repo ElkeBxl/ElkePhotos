@@ -6,8 +6,6 @@ import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	title = 'Elke.photos portfolio';
-
 	@ViewChild('navigation') private navigationElementRef: ElementRef;
 	@ViewChild('hamburgermenu') private hamburgerMenuElementRef: ElementRef;
 
