@@ -13,7 +13,7 @@ export class SidebarThumbnailComponent {
 	}
 	@Input() set image(newImage: string) {
 		if (newImage.length < 1) {
-			throw new Error('Image url should be provided, given: ' + newImage);
+			throw new Error(`Image url should be provided, given: ${newImage}`);
 		}
 		this._image = newImage;
 	}

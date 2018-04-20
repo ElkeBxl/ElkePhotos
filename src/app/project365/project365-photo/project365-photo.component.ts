@@ -32,13 +32,13 @@ export class Project365PhotoComponent implements OnInit {
 			throw new Error('Photo is required in project365-photo');
 		}
 		if (this.photo.day === undefined) {
-			throw new Error('Day is not defined in 365 photo with name ' + this.photo.name);
+			throw new Error(`Day is not defined in 365 photo with name ${this.photo.name}`);
 		}
 		if (this.photo.month === undefined) {
-			throw new Error('Month is not defined in 365 photo with name ' + this.photo.name);
+			throw new Error(`Month is not defined in 365 photo with name ${this.photo.name}`);
 		}
 		if (this.photo.year === undefined) {
-			throw new Error('Year is not defined in 365 photo with name ' + this.photo.name);
+			throw new Error(`Year is not defined in 365 photo with name  ${this.photo.name}`);
 		}
 	}
 
