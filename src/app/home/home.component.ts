@@ -64,7 +64,7 @@ export class HomeComponent implements OnInit {
 			if (!this.loadedBricks.includes(brick)) {
 				const img = new Image();
 				img.onload = () => this.onImageLoaded(brick);
-				img.src = 'assets/images/' + brick.filename;
+				img.src = `assets/images/${brick.filename}`;
 			}
 		});
 	}

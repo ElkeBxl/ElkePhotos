@@ -15,7 +15,7 @@ import { Observable } from 'rxjs/Observable';
 	}
 	set interval(newInterval: number) {
 		if (newInterval < 1) {
-			throw new Error('Interval should be bigger than 0, given: ' + newInterval);
+			throw new Error(`Interval should be bigger than 0, given: ${newInterval}`);
 		}
 		this._interval = newInterval;
 		this.resetInterval();
@@ -27,7 +27,7 @@ import { Observable } from 'rxjs/Observable';
 	}
 	@Input('amount') set amount(newAmount: number) {
 		if (newAmount < 1) {
-			throw new Error('Amount should be bigger than 0, given: ' + newAmount);
+			throw new Error(`Amount should be bigger than 0, given: ${newAmount}`);
 		}
 		this._amount = newAmount;
 	}
@@ -58,6 +58,6 @@ import { Observable } from 'rxjs/Observable';
 	}
 
 	getBackgroundImage(): string {
-		return 'url(\'' + this.location + '-' + this.current.toString() + '.jpg\')';
+		return `url('${this.location}-${this.current.toString()}.jpg')`;
 	}
 }

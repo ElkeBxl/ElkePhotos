@@ -51,7 +51,7 @@ export class AlbumComponent implements OnInit {
 	}
 
 	public getUrl(photo: Photo): string {
-		return 'assets/images/albums/' + this.album.folder + '/' + this.pad(photo.id, 3) + '.jpg';
+		return `assets/images/albums/${this.album.folder}/${this.pad(photo.id, 3)}'.jpg`;
 	}
 
 	private pad(num: number, size: number): string {

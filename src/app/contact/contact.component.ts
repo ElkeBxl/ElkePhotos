@@ -8,7 +8,4 @@ import { Component, OnInit } from '@angular/core';
 	]
 })
 export class ContactComponent {
-
-	public pageTitle = 'Contacteer mij';
-
 }
