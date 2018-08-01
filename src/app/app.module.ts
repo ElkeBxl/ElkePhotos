@@ -1,30 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, LOCALE_ID } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
-import { Project365Module } from './project365/project365.module';
+import { APP_BASE_HREF, registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Project365Component } from './project365/project365.component';
-import { APP_BASE_HREF } from '@angular/common';
-import { AppRoutingModule } from './app-routing/app-routing.module';
-import { HomeModule } from './home/home.module';
-import { registerLocaleData } from '@angular/common';
-
 import localenlBE from '@angular/common/locales/nl-BE';
-import { WeddingsModule } from './weddings/weddings.module';
+import { LOCALE_ID, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { AdminModule } from './admin/admin.module';
+import { AlbumModule } from './album/album.module';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { AppComponent } from './app.component';
+import { ContactModule } from './contact/contact.module';
 import { EventsModule } from './events/events.module';
+import { HomeModule } from './home/home.module';
 import { PartiesModule } from './parties/parties.module';
 import { PhotoshootsModule } from './photoshoots/photoshoots.module';
-import { ContactModule } from './contact/contact.module';
-import { NgbModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap/modal/modal.module';
-import { AlbumModule } from './album/album.module';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { PhotoService } from './photo.service';
-import { AdminModule } from './admin/admin.module';
+import { Project365Module } from './project365/project365.module';
+import { SharedModule } from './shared/shared.module';
+import { WeddingsModule } from './weddings/weddings.module';
+
+
 registerLocaleData(localenlBE);
 
 @NgModule({
