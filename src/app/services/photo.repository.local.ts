@@ -1,8 +1,8 @@
+import { Injectable } from '@angular/core';
+import { Album } from '../models/album';
+import { Photo } from '../models/photo';
+import { Project365Photo } from '../models/project365photo';
 import { IPhotoRepository } from './photo.repository';
-import { Injectable, Inject } from '@angular/core';
-import { Photo } from './models/photo';
-import { Project365Photo } from './models/project365photo';
-import { Album } from './models/album';
 
 @Injectable()
 export class LocalPhotoRepository implements IPhotoRepository {

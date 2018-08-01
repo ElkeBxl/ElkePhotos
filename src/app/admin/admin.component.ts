@@ -1,7 +1,7 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
-import { IPhotoService } from '../photo.service';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Project365Photo } from '../models/project365photo';
+import { IPhotoService } from '../services/photo.service';
+import { PHOTO_SERVICE_TOKEN } from '../services/photo.service.token';
 
 @Component({
 	selector: 'app-admin',

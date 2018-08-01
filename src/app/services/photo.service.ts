@@ -1,12 +1,9 @@
-import { Injectable, Inject } from '@angular/core';
-
-import { JSONPhotoRepository } from './photo.repository.json';
-import { LocalPhotoRepository } from './photo.repository.local';
-import { APIPhotoRepository } from './photo.repository.api';
-import { PHOTO_REPOSITORY_TOKEN } from './photo.repository.token';
-import { Project365Photo } from './models/project365photo';
-import { Album } from './models/album';
+import { Inject, Injectable } from '@angular/core';
+import { Album } from '../models/album';
+import { Project365Photo } from '../models/project365photo';
 import { IPhotoRepository } from './photo.repository';
+import { PHOTO_REPOSITORY_TOKEN } from './photo.repository.token';
+
 
 export interface IPhotoService {
 	getAlbum(name: string): Promise<Album>;

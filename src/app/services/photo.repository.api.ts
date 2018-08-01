@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Album } from './models/album';
-import { Photo } from './models/photo';
-import { Project365Photo } from './models/project365photo';
+import { Album } from '../models/album';
+import { Photo } from '../models/photo';
+import { Project365Photo } from '../models/project365photo';
 import { IPhotoRepository } from './photo.repository';
 
 interface Project365ItemsResponse {

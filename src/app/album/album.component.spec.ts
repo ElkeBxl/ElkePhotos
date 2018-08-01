@@ -1,15 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { AlbumComponent } from './album.component';
-import { IPhotoService } from '../photo.service';
-import { Project365Photo } from '../models/project365photo';
-import { Photo } from '../models/photo';
-import { SharedModule } from '../shared/shared.module';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
-import { Params } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 import { Album } from '../models/album';
+import { Project365Photo } from '../models/project365photo';
+import { IPhotoService } from '../services/photo.service';
+import { SharedModule } from '../shared/shared.module';
+import { AlbumComponent } from './album.component';
+
 
 // We mock a PhotoService to avoid any dependencies on stuff
 // like HttpClient (as is the case in JSONPhotoService)

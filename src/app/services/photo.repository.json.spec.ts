@@ -1,11 +1,8 @@
-import { TestBed, async, inject, getTestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { async, getTestBed, TestBed } from '@angular/core/testing';
+import { Album } from '../models/album';
+import { Project365Photo } from '../models/project365photo';
 import { JSONPhotoRepository } from './photo.repository.json';
-import { Project365Photo } from './models/project365photo';
-import { HttpClient } from '@angular/common/http';
-import { Photo } from './models/photo';
-import { PHOTO_SERVICE_TOKEN } from './photo.service.token';
-import { Album } from './models/album';
 
 describe('JSONPhotoService', () => {
 

@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AlbumComponent } from '../album/album.component';
+import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
-import { PhotoService } from '../photo.service';
+import { AlbumComponent } from './album.component';
 
 @NgModule({
 	imports: [

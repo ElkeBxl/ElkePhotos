@@ -6,7 +6,7 @@ import { Project365Component } from './project365.component';
 import { SharedModule } from '../shared/shared.module';
 // import { JSONPhotoRepository } from '../photo.service.json';
 import { Project365Photo } from '../models/project365photo';
-import { IPhotoService } from '../photo.service';
+import { IPhotoService } from '../services/photo.service';
 import { Photo } from '../models/photo';
 import { Project365PhotoComponent } from './project365-photo/project365-photo.component';
 import { LimitPipe } from '../shared/limit.pipe';

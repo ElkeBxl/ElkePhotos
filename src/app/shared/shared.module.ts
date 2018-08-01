@@ -1,22 +1,20 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PhotoComponent } from './photo/photo.component';
-import { LimitPipe } from './limit.pipe';
-import { RotatingPhotosComponent } from './rotating-photos/rotating-photos.component';
-import { GenericThumbnailComponent } from './generic-thumbnail/generic-thumbnail.component';
-import { SidebarThumbnailComponent } from './sidebar-thumbnail/sidebar-thumbnail.component';
-import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { InPageNavigationDirective } from './in-page-navigation.directive';
-import { MasonryModule } from 'angular2-masonry';
-import { RouterLink } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { PhotoService } from '../photo.service';
-import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
-import { PHOTO_REPOSITORY_TOKEN } from '../photo.repository.token';
-import { JSONPhotoRepository } from '../photo.repository.json';
-import { APIPhotoRepository } from '../photo.repository.api';
-import { LocalPhotoRepository } from '../photo.repository.local';
+import { MasonryModule } from 'angular2-masonry';
 import { environment } from '../../environments/environment';
+import { JSONPhotoRepository } from '../services/photo.repository.json';
+import { LocalPhotoRepository } from '../services/photo.repository.local';
+import { PHOTO_REPOSITORY_TOKEN } from '../services/photo.repository.token';
+import { PhotoService } from '../services/photo.service';
+import { PHOTO_SERVICE_TOKEN } from '../services/photo.service.token';
+import { GenericThumbnailComponent } from './generic-thumbnail/generic-thumbnail.component';
+import { InPageNavigationDirective } from './in-page-navigation.directive';
+import { LimitPipe } from './limit.pipe';
+import { PhotoComponent } from './photo/photo.component';
+import { RotatingPhotosComponent } from './rotating-photos/rotating-photos.component';
+import { SidebarThumbnailComponent } from './sidebar-thumbnail/sidebar-thumbnail.component';
 
 @NgModule({
 	imports: [

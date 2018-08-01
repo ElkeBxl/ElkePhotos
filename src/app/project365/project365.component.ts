@@ -1,8 +1,7 @@
-import { Component, OnInit, Inject, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { Project365Photo } from '../models/project365photo';
-import { IPhotoService } from '../photo.service';
-import { elementVisible } from '@ngui/utils';
-import { PHOTO_SERVICE_TOKEN } from '../photo.service.token';
+import { IPhotoService } from '../services/photo.service';
+import { PHOTO_SERVICE_TOKEN } from '../services/photo.service.token';
 
 @Component({
 	selector: 'app-project365',

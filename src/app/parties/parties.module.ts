@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PartiesComponent } from '../parties/parties.component';
+import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
+import { PartiesComponent } from './parties.component';
 
 @NgModule({
 	imports: [
