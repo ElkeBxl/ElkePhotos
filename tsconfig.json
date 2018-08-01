@@ -14,9 +14,11 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "module": "es2015",
+    "baseUrl": "./"
   },
-  "include":[
+  "include": [
     "node_modules/angular2-masonry",
     "src/**/*"
   ]
